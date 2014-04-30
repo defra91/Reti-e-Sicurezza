@@ -1,1 +1,41 @@
 \section{Capitolo Strato Fisico}
+
+\subsection{Cosa si intende per serie di Fourier}
+
+Le informazioni possono essere trasmesse via cavo variando alcune proprietà fisiche, come la
+tensione e corrente. Fourier condusse alcuni studi ed arrivò alla conclusione che le informazioni
+trasmesse via cavo potevano essere rappresentate da una funzione $f(t)$. Questa funzione è
+composta da una serie infinita di somme di seni e coseni, ed è in grado di rappresentare un segnale
+periodico e regolare. La trasmissione però non è mai perfetta e c'è per forza attenuazione di linea.
+L'intervallo di frequenze trasmesse senza forte attenuazione è detto \textbf{banda passante}.
+Anche in un ipotetico canale perfetto, ovvero senza attenuazioni, la velocità di trasmissione non
+può essere troppo elevata; la massima velocità è data dall'equazione di Nyquist/Shannon:
+
+\begin{center}
+
+$V_{max} = \log_{2} V  bit/sec$
+
+\end{center}
+
+\subsection{Bitrate e baudrate}
+
+Bitrate: Velocità di trasmissione si indica in $bit/s$. Il teorema di Nyquist mette in relazione il bitrate con la banda disponibile:
+
+\begin{center}
+
+	$2H\log_2V$
+
+\end{center}
+
+Con H banda disponibile e V livelli di segnale (simboli) usati:
+
+\begin{center}
+
+	$S/N = segnale/rumore$,  $SNR = 10\log_{10} (S/N) dB$
+	\newline
+	$Massimo bitrate = 2\log_2 (1+(S/N))$
+
+\end{center}	
+
+Baudrate: numero di imboli al secondo, un simbolo può valere più bit.
+
