@@ -1,0 +1,130 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage[titles]{tocloft}
+\usepackage{appendix}
+\hypersetup{%
+    pdfborder = {0 0 0}
+}
+
+\usepackage[svgnames]{xcolor} % Required to specify font color
+\usepackage{listings}
+\usepackage{graphicx}
+
+\newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} % Generic publisher logo
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\titleAT}{\begingroup % Create the command for including the title page in the document
+\newlength{\drop} % Command for generating a specific amount of whitespace
+\drop=0.1\textheight % Define the command as 10% of the total text height
+
+\rule{\textwidth}{1pt}\par % Thick horizontal line
+\vspace{2pt}\vspace{-\baselineskip} % Whitespace between lines
+\rule{\textwidth}{0.4pt}\par % Thin horizontal line
+
+\vspace{\drop} % Whitespace between the top lines and title
+\centering % Center all text
+\textcolor{Black}{ % Red font color
+{\Huge Tutte le domande}\\[0.5\baselineskip] % Title line 1
+{\Large di}\\[0.75\baselineskip] % Title line 2
+{\Huge Reti e Sicurezza}} % Title line 3
+
+\vspace{0.25\drop} % Whitespace between the title and short horizontal line
+\rule{0.3\textwidth}{0.4pt}\par % Short horizontal line under the title
+\vspace{\drop} % Whitespace between the thin horizontal line and the author name
+
+{\Large Luca De Franceschi}\par % Author name
+
+\vfill % Whitespace between the author name and publisher text
+{\large Università degli studi di Padova}\par % Publisher
+
+\vspace*{\drop} % Whitespace under the publisher text
+
+\rule{\textwidth}{0.4pt}\par % Thin horizontal line
+\vspace{2pt}\vspace{-\baselineskip} % Whitespace between lines
+\rule{\textwidth}{1pt}\par % Thick horizontal line
+
+\endgroup}
+
+\titleformat{\chapter}[display]
+{}{\hfill\rule{.7\textwidth}{3pt}}{2pt}
+{\hspace*{.3\textwidth}\huge\bfseries}[\addvspace{1pt}]
+\titleformat{name=\chapter,numberless}[display]
+{}{\hfill\rule{.7\textwidth}{3pt}}{2pt}
+{\hspace*{.3\textwidth}\huge\bfseries}[\addvspace{1pt}]
+
+\renewcommand*\contentsname{Indice}
+\renewcommand{\figurename}{Figura}
+
+\newcommand{\glossario}[1]{\textit{#1\ped{\ped{G}}}}
+
+\lstset{literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1
+}
+
+\lstdefinestyle{customat}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=shadowbox,
+  numbers=left,
+  xleftmargin=\parindent,
+  language=Matlab,
+  showstringspaces=false,
+  basicstyle=\fontfamily{georgia}\selectfont\footnotesize\color{black},
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle= \color{blue},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+  tabsize=2,
+  numberstyle=\tiny
+}
+
+\renewcommand{\lstlistingname}{Listato}
+
+\pagestyle{headings}
+%----------------------------------------------------------------------------------------
+%	BLANK DOCUMENT
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\raggedright
+\titleAT % This command includes the title page
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{arabic}
+
+\tableofcontents
+\clearpage
+
+\input{capitolo-strato-fisico}
+\newpage
+\input{capitolo-strato-data-link}
+\newpage
+\input{capitolo-sottostrato-mac}
+\newpage
+\input{capitolo-strato-network}
+\newpage
+\input{capitolo-strato-trasporto}
+\newpage
+\input{capitolo-strato-applicazione}
+\newpage
+\input{capitolo-sicurezza}
+\newpage
+
+\end{document}
