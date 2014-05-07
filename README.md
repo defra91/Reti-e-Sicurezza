@@ -10,4 +10,5 @@ Registro delle modifiche
 
 | Autore  | Data della modifica | Versione | Descrizione |
 | ------------- | ------------- | -------- | ----------- |
+| Luca De Franceschi | 07/05/2014 | 1.1.0 | Stesura del capitolo introduzione |
 | Luca De Franceschi | 07/05/2014  | 1.0.0 | Ricreato documento sulle basi del precedente, redatto da Mirko Polato |
