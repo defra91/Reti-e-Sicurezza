@@ -1,4 +1,4 @@
-Reti-e-Sicurezza
+Reti e Sicurezza
 ================
 
 Questo repository ha lo scopo di versionare e archiviare una pubblicazione LaTeX contenente gli appunti del corso Reti e Sicurezza, tenuto presso l'Università di Padova. Il documento contiene i riassunti per ogni capitolo, un glossario con i termini e una raccolta di domande chieste negli appelli precedenti.
