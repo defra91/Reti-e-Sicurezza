@@ -1,0 +1,249 @@
+\section{Domande degli appelli}
+
+\subsection{Capitolo 2}
+
+\subsubsection{Cosa si intende per serie di Fourier}
+
+Le informazioni possono essere trasmesse via cavo variando alcune proprietà fisiche, come la
+tensione e corrente. Fourier condusse alcuni studi ed arrivò alla conclusione che le informazioni
+trasmesse via cavo potevano essere rappresentate da una funzione $f(t)$. Questa funzione è
+composta da una serie infinita di somme di seni e coseni, ed è in grado di rappresentare un segnale
+periodico e regolare. La trasmissione però non è mai perfetta e c'è per forza attenuazione di linea.
+L'intervallo di frequenze trasmesse senza forte attenuazione è detto \textbf{banda passante}.
+Anche in un ipotetico canale perfetto, ovvero senza attenuazioni, la velocità di trasmissione non
+può essere troppo elevata; la massima velocità è data dall'equazione di Nyquist/Shannon:
+
+\begin{center}
+
+$V_{max} = \log_{2} V  bit/sec$
+
+\end{center}
+
+\subsubsection{Bitrate e baudrate}
+
+Bitrate: Velocità di trasmissione si indica in $bit/s$. Il teorema di Nyquist mette in relazione il bitrate con la banda disponibile:
+
+\begin{center}
+
+	$2H\log_2V$
+
+\end{center}
+
+Con H banda disponibile e V livelli di segnale (simboli) usati:
+
+\begin{center}
+
+	$S/N = segnale/rumore$,  $SNR = 10\log_{10} (S/N) dB$
+	\newline
+	$Massimo bitrate = 2\log_2 (1+(S/N))$
+
+\end{center}	
+
+Baudrate: numero di imboli al secondo, un simbolo può valere più bit.
+
+
+\subsubsection{Descrivere i vari tipi di cavo e confrontarli}
+
+Principalmente esistono 3 tipi di cavo, il classico \textbf{doppino}, il \textbf{cavo coassiale} e la \textbf{fibra}.
+
+Il doppino è composto da due conduttori di rame isolati, attorcigliati tra loro in modo
+elicoidale (DNA style), per evitare interferenze fra di loro. Il doppino è molto utile per la linea
+telefonica, dato che può percorrere molti km senza che il segnale si indebolisca, ovvero senza
+bisogno di un'amplificazione.
+
+Il cavo coassiale è più grosso e può estendersi per distanze maggiori rispetto il doppino. La distanza
+maggiore è frutto di una maggior schermatura a cui è sottoposto il nucleo in rame del cavo che lo
+rende immune dal rumore. Esistono due cavi coassiali, uno da 50 Ohm per le trasmissioni digitali e
+uno da 75 Ohm per quelle analogiche.
+
+La fibra ottica è formata da 3 parti: sorgente luminosa, mezzo di trasmissione e rilevatore di luce. La
+sorgente di luce è rappresentata da LED oppure laser, anche se il secondo, oltre ad essere meno
+diffuso è anche più costoso. Il mezzo trasmissivo è la fibra, composta un nucleo di vetro di pochi
+micron, avvolta in una guaina di vetro rivestita a sua volta da una guaina di plastica. La luce che
+attraversa la fibra è riflessa al suo interno, da un'estremità all'altra del cavo. Nonostante si
+trasmetta alla velocità della luce, quest’ultima viene stroncata dalla velocità di decodifica inferiore
+che avviene alle estremità. La fibra può contenere più raggi che si differenziano per l'angolo di riflessione. Questo tipo di fibra è detto multimodale. Se la trasmissione all'interno della fibra è
+unica, si ha una trasmissione in linea retta, detta monomodale.
+
+Lo svantaggio della fibra rispetto al doppino e cavo coassiale è il costo maggiore e la difficoltà
+nell'unire vari pezzi di cavo, mentre per gli altri due tipi basta attorcigliare il nucleo di rame. Il
+vantaggio della fibra è la manutenzione, essendo vetro è pari a zero. Altro vantaggio è l'unione di
+più canali, che avviene tramite prismi.
+
+\subsubsection{Caratteristiche e confronto fra i vari tipi di satellite, GEO, MEO, LEO}
+
+Un satellite è un grande ripetitore di microonde posizionato in cielo. Ci sono tre tipi di satelliti che si
+differenziano per la loro distanza dalla superficie terrestre.
+
+I satelliti più lontani sono detti \textbf{geostazionari} e sono posti in successione su un’orbita circolare al livello dell’equatore, ad una distanza minima di 2 gradi uno dall'altro( ps: immaginare tanti cerchi
+concentrici che hanno come primo cerchio il nostro equatore e tutti gli altri più grandi, i satelliti
+sono su uno di questi). Questi satelliti sono molto lontani dalla terra e per questo hanno un tempo
+medio di ritardo della trasmissione di 300 millisecondi, ma con uno di essi possiamo coprire quasi
+un terzo della superficie terrestre. I satelliti \textbf{LEO} distano circa 500 km dalla terra, hanno un tempo di latenza inferiore rispetto ai GEO, come il consumo energetico. Essendo vicini, per coprire tutta la
+terra, sono necessari molti satelliti. Si muovono velocemente. I satelliti \textbf{MEO} sono posti a un'orbita intermedia tra i LEO e GEO, hanno una velocità relativamente bassa, in quanto sono posti a 18 mila
+km dalla terra e il loro tempo di rivoluzione è di 6 ore.
+
+\subsubsection{Che cos'è la modulazione in frequenza (FM)? E in ampiezza(AM)?}
+
+La modulazione in frequenza è una delle tecniche di trasmissione utilizzate per inviare informazioni
+attraverso la variazione della frequenza dell’onda portante. La FM è una modulazione a onda
+continua, ovvero viene modulata la portante sinusoidale.
+Per riuscire a inviare dati in forma digitale è necessario un ampio spettro di frequenza, questo
+rende adatta la trasmissione in banda base solo a basse velocità e a distanze brevi. Nella
+modulazione a frequenza vengono utilizzate 2 o più frequenze.
+
+\textbf{Pro}:
+
+\begin{itemize}
+
+\item Molto meno sensibile ai disturbi rispetto all’AM;
+\item Permette una trasmissione di miglior qualità;
+\item Efficienza energetica molto maggiore, cioè il segnale di informazione non richiede potenza aggiuntiva per essere trasmesso.
+\item 
+
+\end{itemize}
+
+\textbf{Contro}:
+
+\begin{itemize}
+
+\item Necessità di circuiti molto più complessi;
+\item Occupa più banda;
+\item 
+
+\end{itemize}
+
+Modulazione in ampiezza (AM): due diverse ampiezze sono usate per rappresentare 0 e 1. Utilizza
+per il segnale un segnale a radio frequenza come portante. L’AM modifica il segnale in modo
+proporzionale.
+
+\textbf{Pro}:
+
+\begin{itemize}
+
+\item Semplice da mettere in pratica.
+
+\end{itemize}
+
+\textbf{Contro}:
+
+\begin{itemize}
+
+\item Molto sensibile a disturbi.
+
+\end{itemize}
+
+\subsubsection{Che cos'è la modulazione delta (delta modulation)?}
+
+Questa tecnica è una differente tecnica di multiplexing (più conversazioni nello stesso mezzo fisico)
+a divisione di tempo. Ogni valore campionato differisce dal precedente di +1 o -1 sotto le condizioni
+che può essere trasmesso un singolo bit che dice se il nuovo campione è maggiore o minore del
+precedente.
+
+\subsubsection{Descrivere in dettaglio il GSM (Global System for Mobile connection)}
+
+Il GSM è una tecnologia simile al D-AMPS, appartenente alla seconda generazione di cellullari con
+qualche modifica. La prima sostanziale è il numero di canali, infatti il GSM ha 124 coppie di canali
+simplex ampi 200KH e supporta fino ad 8 connessioni contemporanee grazie al multiplexing a
+divisione di tempo. La trasmissione e la ricezione non avvengono nello stesso intervallo, poiché il
+sistema non è in grado di gestirlo. Il GSM è il protocollo che ha introdotto le SIM, le quali
+contengono IMSI e la chiave crittografia KI, diversa per ogni SIM. Il cellulare manda IMSI e KI in
+broadcast. L'operatore riceve entrambi e invia un numero casuale, che viene analizzato e
+rimandato con la firma del KI all'operatore.
+
+La struttura a cella GSM: nel protocollo GSM ci sono 4 tipi di celle: macro, micro, pico e Umbrella.
+Le prime sono le più grandi, sono sopraelevate rispetto gli edifici e hanno un raggio massimo di 35
+km. Le micro sono più piccole, coprono un'altezza pari agli edifici. Le pico sono molto piccole, usate
+in aree molto dense, tipicamente indoor. Umbrella è una piccola estensione, usata per coprire i
+buchi tra le varie celle sopracitate.
+
+\subsubsection{Si descriva la tecnica CDMA (Code Division Multiple Access), possibilmente con esempio}
+
+CDMA permette la trasmissione per tutto il tempo attraverso l'intero spettro. Queste trasmissioni
+multiple e simultanee vengono separate tramite tecnica di codifica. L'idea è che i segnali si
+sommino linearmente, ma ogni coppia lo fa in lingua diversa. Per risalire a ciò che viene detto,
+basta togliere il rumore aggiunto dalle altre conversazioni utilizzando le matrici di Walsh. Vediamo
+un esempio.
+
+Creando una matrice di Hadamard 4x4 posso gestire 4 lingue, invertendo ogni riga ottengo altre 4
+parole, in modo da avere una coppia di parole per ogni lingua. Ognuno usa una parola, si sommano
+le coordinate di ogni parola ottenendo un unico vettore risultante che moltiplicato per una parola
+di una determinata lingua, fornisce un numero:
+
+\begin{itemize}
+
+\item \textbf{Zero}: se il dispositivo non ha trasmesso;
+\item \textbf{Positivo}: c'è una parola in quella lingua e la parola è la parola positiva;
+\item \textbf{Negativo}: c'è una parola in quella lingua e la parola è la parola negativa;
+
+\end{itemize}
+
+Es: Si costruisca una base trasmissiva (chip codes) per 18 stazioni in CDMA (volendo, usando le
+matrici di Hadamard).
+Basta fare la matrice di hadamard 32x32 e prendere solo 18 righe Il chip codes è una riga della
+matrice (di Hadamard) che viene assegnata alla singola stazione che trasmette quello per mandare
+un 1 o il complemento a 1 $(riga * -1)$ per mandare uno 0. Ogni riga definisce una ``lingua'' diversa che
+è linearmente indipendente dalle altre (alias riga $S*T = S*(-1*T )= 0$ se $S != T$).
+
+\subsubsection{Il GPRS: cos'è, difetti e pregi}
+
+Il GPRS è un'evoluzione del GMS che permette la gestione del traffico a pacchetti. Al contrario del
+GSM non serve un servizio dedicato ma vi è un canale condiviso. Lo spreco di banda è inesistente e
+si utilizza una tariffa a traffico e non a tempo, come avviene per il GSM. IL GPRS aggiunge il
+supporto a PPP e IP. essendo una naturale evoluzione del GSM, ci furono differenti classi di
+cellulare, a seconda del supporto alla prima o seconda tecnologia.
+
+Nei cellulari in classe C, l'utente deve selezionare quale comunicazione utilizzare, se GSM oppure
+GPRS. La classe B, permette di utilizzare entrambe le reti, ma se si sta scaricando un pacchetto e si
+riceve una chiamata, il download viene sospeso. Prima della classe A, esiste una pseudo classe A, in
+cui si possono usare contemporaneamente utilizzando una solo frequenza. La Classe A, permette di
+utilizzare sia una che l'altra tecnologia, contemporaneamente, è come avere due cellulari
+indipendenti.
+
+La sicurezza è analoga al GSM, con l’aggiunta di una seconda chiave Kc( cipher key). Questa è
+generata ogni volta dalla Ki e da un numero casuale ogni volta che l’utente di autentica.
+
+\subsubsection{Handoff: che cos’è e i vari tipi}
+
+Nelle connessioni mobili, ogni telefono è connesso alla rete tramite una sola cella finché non si
+sposta. Quando ci si sposta, si deve cambiare la cella precedente con una più vicina, anche per
+evitare problemi dati dalla distanza. La disconnessione da una cella, può avvenire con due modalità:
+
+\begin{itemize}
+
+\item Hard handoff: quando il segnale è troppo debole, lo switching office chiede alle celle vicine
+quanta potenza ricevono dal cellulare. Queste gli rispondono e il cellulare viene riassegnato
+alla cella con più potenza. Quindi il cellulare viene mollato e poi riagganciato, in qualche
+caso è presente del lag che fa cadere la linea;
+\item Soft handoff: introdotto da GSM per ovviare al problema del lag, quando il cellulare ha
+poco segnale dalla cella, prima di lasciarla, si aggancia ad una nuova e poi abbandona la
+vecchia. Occorre che il cellulare gestisca due frequenze, cosa che 1G e 2G non supportavano.
+
+\end{itemize}
+
+\subsubsection{FDM, TDM, CDM: algoritmi per la selezione della banda}
+
+FDM: sfrutta la trasmissione in banda passante per condividere un canale, divide lo spettro in
+bande di frequenza di cui ogni utente ha uso esclusivo per inviare il proprio segnale.
+
+TDM: gli utenti fanno a turni secondo una politica round-robin e ognuno di loro, periodicamente
+prende possesso della banda completa per un tempo limitato.
+
+CDM: comunicazione a spettro distribuito in cui un segnale a banda stretta viene sparso su una
+banda di frequenza più ampia. Ciò rende il segnale più tollerante alle interferenze e permette a più
+segnali di utenti diversi di condividere la stessa banda di frequenza, chiamato anche CDMA.
+
+\subsubsection{QAM e QAM16 (Quadrature Amplitude Modulation)}
+
+È un sistema di modulazione numerica sia analogica che digitale. Le portanti sono solitamente
+sinusoidali. Il termine quadratura indica che gli angoli differiscono di $90 ^{\circ}$. Il segnale può essere visto
+come la somma di due segnali modulati in fame.
+
+QAM: Più immune al rumore si ottiene tramite i diagrammi a costellazione, quelli circolari sono
+quelli ideali ma sono più difficili sia da ottenere che da decodificare.
+QAM 16: Quando si voleva spingere sull’acceleratore, nella trasmissione di dati via cavo, si è
+pensato che il miglior approccio da utilizzare era combinare due tipi di modulazione assieme,
+l’ampiezza e la fase.
+
+Da questa idea nasce il QAM-16. Grazie ad esso possiamo utilizzare un alfabeto più ampio e spedire
+un simbolo su 16 ogni unità di tempo con bitrate quadruplo.
