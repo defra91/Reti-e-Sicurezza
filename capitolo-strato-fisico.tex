@@ -1,11 +1,27 @@
 \section{Lo strato fisico}
 
-\subsection{Mezzi di Trasmissione}
+Lo scopo dello strato fisico è quello di trasportare un flusso di bit da una macchina all'altra. I mezzi di trasmissione si dividono in:
 
-\subsubsection{Basi teoriche della comunicazione dati}
+\begin{itemize}
 
-Le informazioni posso essere trasmesse via cavo variando alcue proprietà fisiche (tensione/corrente). Rappresentando la tensione/corrente in una funzione f(t) è possibile analizzare il segnale. Fourier dimostrò che un segnale di questo tipo, periodico e abbastanza regolare può essere descritto da una ideale somma infinita di seni e coseni (\textbf{Serie di Fourier}). Una funzione può essere ricostruita  a partire dalla sua serie di Fourier. Analizziamo un segnale di trasmissione analogica e proviamo a ricostruirlo con Fourier. Dobbiamo tener conto che nessun canale trasmissivo è perfetto, per cui c'è sicuramente attenuazione. L'intervallo di frequenze trasmesse senza forte attenuazione è detto \textbf{banda passante}. Anche in un canale perfetto ci si accorge comunque che un segnale digitale non può essere trasmesso a velocità troppo elevate, esistono però alcuni schemi di codifica per aumentare la velocità di trasmissione.\\
-Nyquist/Shannon dimostrò che la velocità massima di trasmissione è:\\
+\item Mezzi di trasmissione \textbf{guidati};
+\item Mezzi di trasmissione \textbf{non guidati}.
+
+\end{itemize}
+
+\subsection{Basi teoriche della comunicazione dati}
+
+Le informazioni posso essere trasmesse via cavo variando alcue proprietà fisiche (tensione/corrente). Rappresentando la tensione/corrente in una funzione f(t) è possibile analizzare il segnale. Fourier dimostrò che un segnale di questo tipo, periodico e abbastanza regolare può essere descritto da una ideale somma infinita di seni e coseni:
+
+$$g(t)=\frac{1}{2}c+\displaystyle\sum\limits_{n=1}^\infty a_n sen(2\pi nft)+\displaystyle\sum\limits_{n=1}^\infty b_n cos(2\pi nft) $$
+
+dove $f=1/T$ rappresenta la frequenza fondamentale, $a_n$ e $b_n$ sono rispettivamente le ampiezze seno e coseno della \textit{n-esima} \textbf{armonica}, e $c$ rappresenta una costante. Questa scomposizione è chiamata \textbf{serie di Fourier}.
+\linebreak
+\linebreak
+L'intervallo di frequenze trasmesse senza una forte attenuazione è chiamato \textbf{banda passante}, o semplicemente banda, ovvero l'insieme di frequenze che riescono a trasmettere sul canale, misurata in \textit{Hertz}. La banda passante è una proprietà fisica del mezzo di trasmissione e di solito dipende dalla \textit{costruzione}, dallo \textit{spessore} e dalla \textit{lunghezza} del mezzo. Nessun mezzo trasmissivo è perfetto, per cui c'è sicuramente attenuazione del segnale. Anche in un canale perfetto ci si accorge comunque che un segnale digitale non può essere trasmesso a velocità troppo elevate, esistono però alcuni schemi di codifica per aumentare la velocità di trasmissione.
+
+Una funzione può essere ricostruita  a partire dalla sua serie di Fourier. Analizziamo un segnale di trasmissione analogica e proviamo a ricostruirlo con Fourier. Dobbiamo tener conto che nessun canale trasmissivo è perfetto, per cui c'è sicuramente attenuazione. L'intervallo di frequenze trasmesse senza forte attenuazione è detto \textbf{banda passante}. Anche in un canale perfetto ci si accorge comunque che un segnale digitale non può essere trasmesso a velocità troppo elevate, esistono però alcuni schemi di codifica per aumentare la velocità di trasmissione.\\
+Henry Nyquist (ingegnere di AT\&T) e Claude Shannon dimostrarono che la velocità massima di trasmissione è:\\
 
 \[V_{max} = 2H\log_{2}V bit/sec\]
 
@@ -19,50 +35,90 @@ Un risultato notevole ottenuto da Shannon fu:
 
 con H pari all'ampiezza di banda in Hz.
 
+\subsection{Mezzi di trasmissione guidati}
+
 \subsubsection{Mezzi Magnetici}
 
-Sistema molto semplice, utilizzato da sempre e basato su un funzionamento banale: si salvano i dati su nastri magnetici (dischi rimovibili) e si trasportano fisicamente a destinazione dove verranno letti. Se si pensa a un tir che trasporta un centinaio di HD da 1TB che percorre qualche Km per consegnare questi dischi si può intuire che la larghezza di banda è elevatissima e con un costo irrisorio. La cosa banalmente poco buona è l'enorme ritardo nella trasmissione dati.
+Sistema molto semplice, utilizzato da sempre e basato su un funzionamento banale: si salvano i dati su nastri magnetici (dischi rimovibili) e si trasportano fisicamente a destinazione dove verranno letti. Se si pensa a un tir che trasporta un centinaio di HD da 1TB che percorre qualche Km per consegnare questi dischi si può intuire che la larghezza di banda è elevatissima e con un costo irrisorio. La cosa banalmente poco buona è l'enorme ritardo nella trasmissione dati, in quanto la durata della trasmissione è espressa in minuti e in ore, non in millisecondi.
 
 \subsubsection{Doppino}
 
-Il doppino è composto da 2 conduttori di rame isolati attorcigliati tra loro a forma elicoidale (stile DNA), questo per evitare interferenze tra di loro (risulterebbero un ottima antenna). Viene largamente utilizzato nel sistema telefonico, questo perché il doppino può attraversare diversi Km senza bisogno di amplificare il segnale così dall'abitazione si può agevolmente arrivare alla centrale. Si possono usare per trasmettere dati Analogici o anche Digitali e la larghezza di banda dipende dal diametro del cavo e dalla distanza percorsa. Esistono più categorie di questi cavi che differiscono sostanzialmente per il numero di spire per cm per ridurre le interferenze. Il doppino cat3 (usato sino al 1988) sono composte da 2 cavi isolati cavi attorcigliati. Il doppino cat5 sono come i cat3 ma utilizzano più spire per cm questo li rendono più adatti a trasmissione ad alta velocità. Il doppino può arrivare a una banda di 250-600MHz. Questi cavi sono detti anche UTP (\textit{Unshielded Twisted Pair}).
+È uno dei mezzi di trasmissione più vecchi, ma è ancora molto in voga. Il doppino è composto da 2 conduttori di rame isolati (spessi 1mm), attorcigliati tra loro a forma elicoidale (stile DNA), questo per evitare interferenze tra di loro (risulterebbero un ottima antenna), in quanto i campi elettromagnetici generati dai due conduttori si annullano a vicenda. Viene largamente utilizzato nel sistema telefonico, questo perché il doppino può attraversare diversi Km senza bisogno di amplificare il segnale così dall'abitazione si può agevolmente arrivare alla centrale. Si possono usare per trasmettere dati Analogici o anche Digitali e la larghezza di banda dipende dal diametro del cavo e dalla distanza percorsa. Esistono più categorie di questi cavi che differiscono sostanzialmente per il numero di spire per cm per ridurre le interferenze. Il doppino \textbf{cat3} (usato sino al 1988) è composto da 2 cavi isolati e attorcigliati. Il doppino \textbf{cat5} è come il cat3, ma utilizza più spire per cm; questo lo rende più adatto a trasmissione ad alta velocità in quanto migliora la qualità del segnale. Il doppino può arrivare a una banda di 250-600MHz. Questi cavi sono detti anche UTP (\textit{Unshielded Twisted Pair}).
 
 \subsubsection{Cavo coassiale}
+	
+Essendo più schermato del precedente il \textbf{cavo coassiale} può estendersi per distanze maggiori. Esistono 2 tipi di cavi coassiali: da 50 Ohm per le trasmissioni digitali e da 75 Ohm per le analogiche, per la televisione e le connessioni Internet via cavo. 
+È composto da un nucleo di rame, rivestito da materiale isolante a sua volta rivestito da una calza conduttrice il tutto ricoperto da una guaina protettiva, il cavo coassiale è caratterizzato da un eccellente immunità al rumore. L'ampiezza di banda di questi cavi arriva attorno a 1GHz e dipende dalla lunghezza, dalla qualità e dal rapporto segnale-rumore del segnale. Il cavo coassiale è ancora molto utilizzato per le reti metropolitane e le televisioni via cavo.
 
-Essendo più schermato del precedente il cavo coassiale può estendersi per distanze maggiori. Esistono 2 tipi di cavi coassiali: da 50 Ohm per le trasmissioni digitali e da 75 Ohm per le analogiche.
-Composto da un nucleo di rame, rivestito da materiale isolante a sua volta rivestito da una calza conduttrice il tutto ricoperto da una guaina protettiva, il cavo coassiale è caratterizzato da un eccellente immunità al rumore. L'ampiezza di banda di questi cavi arriva attorno a 1GHz e dipende dalla lunghezza, dalla qualità e dal rapporto segnale-rumore del segnale.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=80mm]{images/cavo_coassiale.jpg}
+\caption{Struttura del cavo coassiale}
+\end{figure}
 
 \subsubsection{Fibra Ottica}
 
-Un sistema di trasmissione ottico è formato principalmente di 3 parti: sorgente luminosa, mezzo di trasmissione e rilevatore di luce. La sorgente di luce è rappresentata o da LED o semiconduttori laser. Il mezzo trasmissivo ovviamente è la fibra composta da un nucleo (core) di vetro di pochi micron avvolto in una guaina di vetro (cladding) con indice di rifrazione più basso e infine la solita rivestitura con guaina in plastica. La fibra si basa su un principio molto semplice, ovvero che la luce che la attraversa viene riflessa al suo interno fino ad arrivare all'altra estremità del cavo, questo avviene perchè la luce immessa nel core incontra il cladding con indice di rifrazione minore e il raggio luminoso viene così riflesso (se possiede un inclinazione corretta). La velocità di tale raggio è circa quella della luce infatti il limite di banda della fibra non è dovuto alla velocità di trasmissione ma di decodifica del segnale luminoso in impulso elettrico. Una fibra può contenere più raggi che si riflettono in essa l'importante è che il loro angolo di riflessione sia diverso. Questo tipo di fibre è detto \textbf{multimodale}. Le fibre che invece permettono la trasmissione di luce in linea retta sono le \textbf{monomodali} che non sono altro che guide d'onda ma possono raggiungere i 50Gbps per 100Km senza attenuazione.\\ Un problema delle fibre è il collegamento tra 2 i esse che può avvenire in 3 modi:
+Un sistema di trasmissione ottico è formato principalmente di 3 parti: \textbf{sorgente luminosa}, \textbf{mezzo di trasmissione} e \textbf{rilevatore di luce}. Per convenzione, un impulso di luce indica il valore 1 e l'assenza di luce indica il valore 0. Il mezzo trasmissivo ovviamente è la fibra composta da un nucleo (\textbf{core}) di vetro di pochi micron avvolto in una guaina di vetro (\textbf{cladding}) con indice di rifrazione più basso e infine la solita rivestitura con guaina in plastica. La fibra si basa su un principio molto semplice, ovvero che la luce che la attraversa viene riflessa al suo interno fino ad arrivare all'altra estremità del cavo. Questo avviene perchè la luce immessa nel core incontra il cladding con indice di rifrazione minore e il raggio luminoso viene così riflesso (se possiede un inclinazione corretta). La velocità di tale raggio è circa quella della luce, infatti il limite di banda della fibra non è dovuto alla velocità di trasmissione ma di decodifica del segnale luminoso in impulso elettrico. Una fibra può contenere più raggi che si riflettono in essa l'importante è che il loro angolo di riflessione sia diverso. Questo tipo di fibre è detto \textbf{multimodale}. Le fibre che invece permettono la trasmissione di luce in linea retta sono le \textbf{monomodali} che non sono altro che guide d'onda ma possono raggiungere i 50Gbps per 100Km senza attenuazione.
+
+L'attenuazione della luce attraverso il vetro dipende dalla lunghezza d'onda della luce. L'attenuazione, espressa in decibel, si ricava dalla seguente formula:
+
+$$attenuazione = 10\log_{10} \frac{energia trasmessa}{energia ricevuta} $$
+
+Per la comunicazione ottica si usano tre bande di lunghezza d'onda, centrate rispettivamente a 0,85, 1,30 e 1,55 micron. Gli impulsi luminosi trasmessi attraverso la fibra si espandono in lunghezza durante la propagazione; il fenomeno si chiama \textbf{dispersione cromatica}, che dipende dalla lunghezza d'onda. 
+\linebreak
+\linebreak
+Per generare il segnale normalmente si impiegano due tipi di sorgenti luminose: i \textbf{LED} (\textit{Light Emitting Diode}) e i \textbf{semiconduttori laser}. All'estremità finale della fibra si trova un fotodiodo che genera un impulso elettrico ogni volta che è colpito dalla luce. Il tipico tempo di risposta di un fotodiodo è un nsec, perciò la trasmissione dati è limitata a 1 Gpbs.
+\linebreak
+\linebreak
+Un problema delle fibre è il collegamento tra 2 di esse, che può avvenire in 3 modi:
 
 \begin{enumerate}
 
-\item{ Le fibre vengono inserite in apposite prese grazie a dei connettori con perdita di circa 10-20\% della luce};
-\item{ Le fibre vengono attaccate meccanicamente, messe di fronte una all'altra e poi viene avvolto in una macchina particolare per poi essere pinzate, con perdita comunque di circa il 10\% della luce};
-\item{ Le fibre vengono fuse tra loro. Una soluzione quasi ottimale, anche se difficile, genera una piccola attenuazione di segnale}.
+\item{Le fibre vengono inserite in apposite prese grazie a dei connettori con perdita di circa 10-20\% della luce};
+\item{Le fibre vengono attaccate meccanicamente, messe di fronte una all'altra e poi viene avvolto in una macchina particolare per poi essere pinzate, con perdita comunque di circa il 10\% della luce};
+\item{Le fibre vengono fuse tra loro. Una soluzione quasi ottimale, anche se difficile, genera una piccola attenuazione di segnale}.
 
 \end{enumerate}
 
-Le LAN basate sulle fibre ottiche solitamente sono ad anello con congiunzione a T per ogni pc o a stella passiva. La configurazione ad anello ha il difetto che se una congiunzione si guasta salta tutta la rete.
+Le LAN basate sulle fibre ottiche solitamente sono ad anello con congiunzione a T per ogni pc o a stella passiva, questo per evitare gli ostacoli. La configurazione ad anello ha il difetto che se una congiunzione si guasta salta tutta la rete. Altre topologie di configurazione possono essere quelle a \textbf{stella passiva}
+\linebreak
+\linebreak
+Tra gli innumerevoli vantaggi della fibra ottica rispetto alle connessioni in rame citiamo:
+
+\begin{itemize}
+
+\item Maggiore ampiezza di banda;
+\item Non viene influenzata dalle sorgenti elettriche;
+\item Non viene influenzata dai campi magnetici e interruzioni della linea elettrica;
+\item Sono molto più leggere;
+\item Non perdono la luce;
+\item L'intercettazione dei dati è molto difficile, quindi c'è una maggior sicurezza;
+
+\end{itemize}
+
+Di contro è una tecnologie ancora nuova e poco sviluppata e presenta grossi costi di manutenzione.
 
 \subsubsection*{Tabella riassuntiva}
 
 \begin{figure}[htpb]
 \centering
 \includegraphics[scale=1]{images/mezzi.png}
-\caption{Riassunto caratteristiche dei mezzi trasmissivi.}
-\end{figure}
+\caption{Riassunto caratteristiche dei mezzi trasmissivi guidati}
+\end{figure}	
 
 \newpage
 
-\subsection{Trasmissioni Wireless}
+\subsection{Trasmissioni wireless}
 
 \subsubsection{Lo spettro elettromagnetico}
 
-Lo spostamento di elettroni crea campi magnetici. Questa osservazione fu fatta per la prima volta da Hertz. Il numero di oscillazioni al secondo di un'onda è chiamato \textbf{frequenza} e si misura in Hz. La distanza massima tra 2 picchi (o minimi) è chiamata \textbf{lunghezza d'onda}.
-Tutte le trasmissioni wireless si basano sul principio che un antenna collegata a un circuito elettrico invia onde elettromagnetiche che possono essere captate da un ricevitore posto a una distanza appropriata. Le onde viaggiano nell'etere alla velocità della luce.
-Qui di seguito è visualizzato lo spettro elettromagnetico e la sua suddivisione.
+Quando si spostano, gli elettroni creano onde elettromagnetiche che si propagano attraverso lo spazio, anche nel vuoto. Questa osservazione fu fatta per la prima volta dal fisico tedesco Heirich Hertz. Il numero di oscillazioni al secondo di un'onda è chiamato \textbf{frequenza} e si misura in Hz. La distanza massima tra 2 picchi (o minimi) è chiamata \textbf{lunghezza d'onda} ed è universalmente indicata dalla lettera greca \lambda (lambda).
+Nel vuoto tutte le onde elettromagnetiche viaggiano alla stessa velocità, qualunque sia la loro frequenza. Questa velocità, chiamta \textbf{velocità della luce} \textit{c}, è pari a circa $3*10^8 m/sec$. Nei cavi in rame e nelle fibre ottiche la velocità di trasmissione scende a 2/3. La velocità della luce è il limite ultimo della velocità: nessun oggetto o segnale può muoversi più velocemente.
+La relazione fondamentale tra $f$, \lambda e \textit{c} (nel vuoto) è:
+
+$$\lambda f = c$$
+
+Tutte le trasmissioni wireless si basano sul principio che un antenna collegata a un circuito elettrico invia onde elettromagnetiche che possono essere captate da un ricevitore posto a una distanza appropriata. Qui di seguito è visualizzato lo spettro elettromagnetico e la sua suddivisione.
 
 \begin{figure}[htpb]
 \centering
@@ -70,26 +126,32 @@ Qui di seguito è visualizzato lo spettro elettromagnetico e la sua suddivisione
 \caption{Spettro elettromagnetico.}
 \end{figure}
 
+La quantità di informazione che un'onda elettromagnetica può trasportare dipende dalla sua banda. La maggior parte delle trasmissioni utilizza una banda di frequenza ristretta per ottenere la migliore ricezione, ma in certi casi si usa una banda larga con due varianti. Nella tecnica a \textbf{spettro distribuito a frequenza variabile}, il trasmettitore salta da una frequenza a un'altra centinaia di volte al secondo. Questa variante è utilizzata nelle comunicazioni militari, perchè rende difficile rilevare le trasmissioni ed è quasi impossibile da disturbare.
+L'altra forma di trasmissione, chiamata \textbf{spettro distribuito a frequenza diretta}, propaga il segnale in banda larga ed è stato utilizzato per alcuni modelli di cellulari di seconda generazione.
+
 \subsubsection{Trasmissioni radio}
 
-Le onde radio sono onde omnidirezionali semplici da riprodurre e viaggiano per lunghe distanze attraversando gli edifici. Non necessita di alcun allineamento trasmettitore-ricevente. Nell'aria l'attenuazione delle onde con frequenze più basse è di circa 1/\(r^2\). Nelle bande VLF, LF, MF le onde seguono la forma del terreno e possono viaggiare per circa 1000 Km. Nelle alte frequenze invece le onde che riescono ad entrare nella ionosfera vengono riflesse e ritornano sulla terra permettendo così di percorrere distanze notevoli. 
+Le onde radio sono onde omnidirezionali semplici da riprodurre e viaggiano per lunghe distanze attraversando gli edifici. Non necessita di alcun allineamento trasmettitore-ricevente. Le proprietà delle onde radio dipendono dalla loro frequenza. Nell'aria l'attenuazione delle onde con frequenze più basse è di circa 1/\(r^2\). Nelle bande VLF, LF, MF le onde seguono la forma del terreno e la curvatura della terra e possono viaggiare per circa 1000 Km. Alle frequenze più alte (HF) invece le onde tendono a viaggiare in linea retta, rimbalzando sugli ostacoli (ionosfera) e sono assorbite dalla pioggia. 
+A tutte le frequenze le onde radio sono soggette a interferenze da parte di motori e altri dispositivi elettrici. 
 
 \subsubsection{Trasmissione a microonde}
 
-Sopra i 100 MHz le onde viaggiano quasi in linea retta per cui è necessario un allineamento trasmettitore-ricevente. Concentrando l'onda in un piccolo raggio si ottiene un ottimo rapporto segnale/rumore. Il problema di queste trasmissioni sta nelle lunghe distanze e dalla curvatura della terra, la quale porta alla necessità di ripetitori. L'utilizzo di antenne molto alte riduce l'effetto della curvatura. Alcune onde posso rinfrangersi negli strati più bassi dell'atmosfera e arrivare in ritardo rispetto a quelle dirette e addirittura fuori fase causandone l'annullamento (\textbf{multipath fading}). Le microonde non attraversano gli edifici molto bene, e sono soggette alle condizioni climatiche. Comunemente si usano bande sopra i 10 GHZ ma sopra i 40 GHz la pioggia comincia ad assorbire le onde. Acquisto e installazione di apparecchi per questo tipo di trasmissione è molto basso.
+Sopra i 100 MHz le onde viaggiano quasi in linea retta per cui è necessario un allineamento trasmettitore-ricevente. Concentrando l'onda in un piccolo raggio si ottiene un ottimo rapporto segnale/rumore. Il problema di queste trasmissioni sta nelle lunghe distanze e dalla curvatura della terra, la quale porta alla necessità di ripetitori. L'utilizzo di antenne molto alte riduce l'effetto della curvatura. Più sono le antenne, maggiore può essere la loro distanza. La distanza tra ripetitori varia grossolanamente con la radice quadrata dell'altezza dell'antenna. 
+Alcune onde posso rinfrangersi negli strati più bassi dell'atmosfera e arrivare in ritardo rispetto a quelle dirette e addirittura fuori fase causandone l'annullamento (\textbf{multipath fading}). Le microonde non attraversano gli edifici molto bene, e sono soggette alle condizioni climatiche. Comunemente si usano bande sopra i 10 GHZ ma sopra i 40 GHz la pioggia comincia ad assorbire le onde. Questo sistema di trasmissione offre diversi vantaggi rispetto alla fibra; il principale è che non richiede alcun diritto di passaggio: acquistando un piccolo appezzamento di terreno ogni 50 Km e costruendo su di esso un'antenna è possibile scavalcare il sistema telefonico e comunicare direttamente. Le microonde sono anche relativamente convenienti: acquisto e installazione di apparecchi per questo tipo di trasmissione è molto basso.
 
 \subsubsection*{Divisione dello spettro elettromagnetico}
 
-Tutti vogliono un pezzo di spettro per aumentare la velocità di trasmissione e quindi bisogna regolarne tale divisione, se ne occupa l'ITU-T. In passato per compiere tale divisione sono stati utilizzati 3 modi:
+Tutti vogliono un pezzo di spettro per aumentare la velocità di trasmissione e quindi bisogna regolarne tale divisione, se ne occupa l'\textbf{ITU-T}. In passato per compiere tale divisione sono stati utilizzati 3 modi (3 algoritmi):
 
 \begin{enumerate}
 
-\item{Concorso di bellezza: ognuno di coloro che voleva spettro doveva dare un motivo per il quale doveva averlo proprio lui. Problemi: corruzioni e scelte arbitrarie senza senso.}
-\item{Lotteria: veniva fatta una vera e propria lotteria per assegnare lo spettro. Problemi: partecipavano anche i non interessanti solo per guadagnare soldi dalla rivendita dello spettro. }
-\item{Asta: vendita all'asta dello spettro. Problema: banca rotta delle aziende. }
-\item{Libertà: approcio che non prevede assegnamento di spettro, lasciando trasmissione libera ma regolata. Ovvero la potenza doveva essere utilizzata in modo da limitare la portata per evitare interferenze. }
+\item{\textbf{Concorso di bellezza}: ognuno di coloro che voleva spettro doveva dare un motivo per il quale doveva averlo proprio lui. Problemi: corruzioni e scelte arbitrarie senza senso;}
+\item{\textbf{Lotteria}: veniva fatta una vera e propria lotteria per assegnare lo spettro. Problemi: partecipavano anche i non interessanti solo per guadagnare soldi dalla rivendita dello spettro;}
+\item{\textbf{Asta}: vendita all'asta dello spettro. Problema: banca rotta delle aziende a causa dei debiti.}
 
 \end{enumerate}
+
+Un approccio completamente differente consiste nel non assegnare affatto le frequenze, lasciando che ognuno trasmetta a piacere, ma regolando la potenza utilizzata in modo da limitare la portata delle stazioni per evitare l'interferenza reciproca. Seguendo questo principio la maggior parte dei governi ha riservato alcune bande di frequenza, chiamate \textbf{ISM} (\textit{Industrial}, \textit{Scientific}, \textit{Medical}), per l'utilizzo senza licenze.
 
 \subsubsection{Infrarossi}
 
@@ -99,9 +161,7 @@ Sistema economico e facile da costruire con il difetto di non riuscire ad attrav
 
 Sistema poco costoso che offre una banda molto elevata, facile da installare e non richiede licenze. La sua debolezza sta nel raggio molto sottile (e unidirezioneale) e quindi difficile da indirizzare verso il bersaglio esatto. Per ovviare al problema a volte vengono inserite lenti per rendere il raggio meno focalizzato. Il raggio laser per di più non attraversa la pioggia e la nebbia ed è soggetto a fenomeni di convezione (turbolenza provocata da fonti di calore).
 
-\newpage
-
-\subsection{Satelliti}
+\subsection{Comunicazioni satellitari}
 
 Un satellite può essere immaginato come un grande ripetitore di microonde collocato nel cielo, che contiene molti \textbf{trasponder} (ricetrasmettitori satellitari). I raggi verso la terra possono essere più o meno grandi, questa modalità è detta \textbf{bent pipe}. I satelliti hanno un periodo orbitale che dipende dalla loro altezza rispetto alla terra. Un problema è la presenza delle \textbf{fasce di Val Allen}, strati di particelle molto cariche, che distruggerebbero un satellite in poco tempo.
 
