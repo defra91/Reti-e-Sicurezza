@@ -112,9 +112,9 @@ Di contro è una tecnologie ancora nuova e poco sviluppata e presenta grossi cos
 
 \subsubsection{Lo spettro elettromagnetico}
 
-Quando si spostano, gli elettroni creano onde elettromagnetiche che si propagano attraverso lo spazio, anche nel vuoto. Questa osservazione fu fatta per la prima volta dal fisico tedesco Heirich Hertz. Il numero di oscillazioni al secondo di un'onda è chiamato \textbf{frequenza} e si misura in Hz. La distanza massima tra 2 picchi (o minimi) è chiamata \textbf{lunghezza d'onda} ed è universalmente indicata dalla lettera greca \lambda (lambda).
+Quando si spostano, gli elettroni creano onde elettromagnetiche che si propagano attraverso lo spazio, anche nel vuoto. Questa osservazione fu fatta per la prima volta dal fisico tedesco Heirich Hertz. Il numero di oscillazioni al secondo di un'onda è chiamato \textbf{frequenza} e si misura in Hz. La distanza massima tra 2 picchi (o minimi) è chiamata \textbf{lunghezza d'onda} ed è universalmente indicata dalla lettera greca $\lambda$ (lambda).
 Nel vuoto tutte le onde elettromagnetiche viaggiano alla stessa velocità, qualunque sia la loro frequenza. Questa velocità, chiamta \textbf{velocità della luce} \textit{c}, è pari a circa $3*10^8 m/sec$. Nei cavi in rame e nelle fibre ottiche la velocità di trasmissione scende a 2/3. La velocità della luce è il limite ultimo della velocità: nessun oggetto o segnale può muoversi più velocemente.
-La relazione fondamentale tra $f$, \lambda e \textit{c} (nel vuoto) è:
+La relazione fondamentale tra $f$, $\lambda$ e \textit{c} (nel vuoto) è:
 
 $$\lambda f = c$$
 
@@ -163,7 +163,7 @@ Sistema poco costoso che offre una banda molto elevata, facile da installare e n
 
 \subsection{Comunicazioni satellitari}
 
-Un satellite può essere immaginato come un grande ripetitore di microonde collocato nel cielo, che contiene molti \textbf{trasponder} (ricetrasmettitori satellitari). I raggi verso la terra possono essere più o meno grandi, questa modalità è detta \textbf{bent pipe}. I satelliti hanno un periodo orbitale che dipende dalla loro altezza rispetto alla terra. Un problema è la presenza delle \textbf{fasce di Val Allen}, strati di particelle molto cariche, che distruggerebbero un satellite in poco tempo.
+Nella sua forma più semplice un satellite può essere immaginato come un grande ripetitore di microonde collocato nel cielo, che contiene molti \textbf{trasponder} (ricetrasmettitori satellitari). Ciascuno di questi ascolta una parte dello spettro, amplifica il segnale in ingresso e lo ritrasmette su un'altra frequenza per evitare interferenze con il segnale in arrivo. I raggi puntati verso la terra possono essere larghi oppure stretti, questa modalità operativa è detta \textbf{bent pipe}. I satelliti hanno un periodo orbitale che dipende dalla loro altezza rispetto alla terra. Più è alto un satellite, più è lungo il suo periodo. Un problema è la presenza delle \textbf{fasce di Val Allen}, strati di particelle molto cariche, che distruggerebbero in poco tempo un satellite che le attraversasse.
 
 \begin{figure}[htpb]
 \centering
@@ -173,11 +173,15 @@ Un satellite può essere immaginato come un grande ripetitore di microonde collo
 
 \subsubsection{Satelliti Geostazionari (GEO)}	
 
-Questi satelliti sono posti in orbite molto alte e con le tecnologie odierne non si possono collocare 2 satelliti GEO a meno di 2 gradi nel piano equatoriale, quindi con 180 satelliti si copre tutto. L'allocazione degli slot spaziali è gestito dall'ITU. L'ITU inoltre ha assegnato alcune bande di frequenza alle applicazioni satellitari in modo da non interferire con i sistemi a microonde preesistenti. I segnali inviata da questi satelliti viaggia alla velocità della luce, ma essendo molto lontani dalla terra hanno comunque un ritardo di circa 300 ms. I primi satelliti GEO con una singola emissione coprivano circa 1/3 della terra, chiamata \textbf{impronta}. Poi con lo sviluppo delle tecnologie si è cominciato a concentrare i raggi trasmissivi (spot) in aree geografiche più piccole (centinaia di Km). Un nuovo passo avanti nel settore delle comunicazioni satellitari si ebbe con le stazioni VSAT, piccole stazioni con una'antenna da circa 1m che comunicano con i satelliti GEO e per le loro piccole dimensioni e potenza non essendo in grado di comunicare tra loro si è dovuto ideare  alcune stazioni particolari più potenti per fare da ponte. Sono ovviamente mezzi di trasmissione broadcast e per quanto riguarda la sicurezza sono un disastro. Il costo della trasmissione satellitare non dipende dalla distanza, ma è costante. Hanno una reattività quasi istantanea e un ottimo tasso di errore.
+Questi satelliti sono posti in orbite molto alte e con le tecnologie odierne non si possono collocare 2 satelliti GEO a meno di 2 gradi nel piano equatoriale, per evitare interferenze, quindi con $360/2=180$ satelliti si copre tutto. L'allocazione degli slot spaziali è gestito dall'\textbf{ITU}. L'ITU inoltre ha assegnato alcune bande di frequenza alle applicazioni satellitari in modo da non interferire con i sistemi a microonde preesistenti. 
+I moderni satelliti possono raggiungere dimensioni enormi: alcuni pesano 4000 Kg e consumano diversi kilowatt di energia elettrica prodotta da pannelli solari. Gravità solare, lunare e planetaria tendono ad allontanarli dagli slot e dagli orientamenti assegnati, ma l'effetto è contrastato dai motori a razzo installati a bordo. La continua attività di messa punto è chiamata \textbf{station keeping} e quando dopo una decina di anni circa il propellente dei motori si esaurisce, il satellite va alla deriva e precipita senza che si possa far nulla, quindi dev'essere disattivato. 
+\linebreak
+\linebreak
+I segnali inviata da questi satelliti viaggia alla velocità della luce, ma essendo molto lontani dalla terra hanno comunque un ritardo di circa 300 ms. I primi satelliti GEO con una singola emissione coprivano circa 1/3 della terra, chiamata \textbf{impronta}. Poi con lo sviluppo delle tecnologie si è cominciato a concentrare i raggi trasmissivi (spot) in aree geografiche più piccole (centinaia di Km). Un nuovo passo avanti nel settore delle comunicazioni satellitari si ebbe con le stazioni \textbf{VSAT}, piccole stazioni con un'antenna da circa 1m che comunicano con i satelliti GEO. Per le loro piccole dimensioni e potenza, non essendo in grado di comunicare tra loro, si è dovuto ideare alcune stazioni particolari più potenti per fare da ponte. Sono ovviamente mezzi di trasmissione broadcast e per quanto riguarda la sicurezza sono un disastro. Il costo della trasmissione satellitare non dipende dalla distanza, ma è costante. Hanno una reattività quasi istantanea e un ottimo tasso di errore.
 
 \subsubsection{Satelliti su orbite medie (MEO)}
 
-Questi satelliti si muovono sopra di noi a una velocità relativamente bassa percorrendo il giro del pianeta in circa 6 ore. Coprono un area più piccola dei GEO e si possono raggiungere con mezzi meno potenti. I 24 satelliti GPS che orbitano a 18000 Km sono di tipo MEO.
+Questi satelliti sono disposti ad altitudini molto più basse, comprese tra le due fasce di Van Allen. Essi si muovono sopra di noi a una velocità relativamente bassa,percorrendo il giro del pianeta in circa 6 ore. Di conseguenza devono essere rintracciati mentre si spostano nel cielo. Coprono un'area più piccola dei GEO e si possono raggiungere con mezzi meno potenti. I 24 satelliti GPS che orbitano a 18000 Km sono di tipo MEO.
 
 \subsubsection{Satelliti su orbite basse (LEO)}
 
@@ -185,11 +189,11 @@ Si spostano molto velocemente e per realizzare un sistema completo sono necessar
 
 \subsubsection*{Iridium}					
 
-Lanciati nel 1997 i 66 satelliti LEO del progetto Iridium (Motorola) vennero acquistati da un investitore riprendendo il servizio nel marzo 2001, che era stato fermato nel 1999. Il progetto fornisce un servizio di telecomunicazione a livello mondiale basato su ``cellulari'' particolari'. I satelliti Iridium sono collocati a 750 Km di altezza, con un satellite ogni 32 gradi. Le trasmissioni avvengono nello spazio: ogni satellite comunica con altri satelliti fino a destinazione.
+Lanciati nel 1997 i 66 satelliti LEO del progetto \textbf{Iridium} (Motorola) vennero acquistati da un investitore riprendendo il servizio nel marzo 2001, che era stato fermato nel 1999. Il progetto fornisce un servizio di telecomunicazione a livello mondiale basato su ``cellulari particolari''. I satelliti Iridium sono collocati a 750 Km di altezza, con un satellite ogni 32 gradi. Le trasmissioni avvengono nello spazio: ogni satellite comunica con altri satelliti fino a destinazione.
 
 \subsubsection*{GlobalStar}
 
-Basato su 48 satelliti LEO utilizzando uno schema diverso dal precedente. Il satellite che riceve la chiamata trasmette a una centrale terrestre che comunica con altre fino al satellite posto sulla cella del destinatario. La complessità resta quindi terrestre facilitandone la gestione.
+Basato su 48 satelliti LEO utilizzando uno schema di commutazione diverso dal precedente. Il satellite che riceve la chiamata trasmette a una centrale terrestre che comunica con altre fino al satellite posto sulla cella del destinatario. La complessità resta quindi terrestre facilitandone la gestione.
 
 \subsubsection*{Teledesic}
 
@@ -197,7 +201,7 @@ Progetto mirato per gli utenti internet, con l'idea di offrire 100 Mbps in trasm
 
 \subsubsection{Satelliti o fibra?}
 
-E' ovvio che la comunicazione con le fibre sia molto veloce ma ci sono molti settori in cui i satelliti non possono essere rimpiazzati dalla fibra, come ad esempio la comunicazione mobile. Le comunicazioni broadcast per eccellenza sono satellitari. Un altro settore è la comunicazione in luoghi ostili, in cui le infrastrutture terrestri scarseggiano e la posa di cavi ottici non sarebbe il massimo. Inoltre anche le zone in cui i costi di posa sono elevati il satellite può essere un ottima alternativa. In sostanza per la comunicazione terrestre è sicuramente migliore la fibra ma il satellite rimarrà indispensabili per altri settori.
+E' ovvio che la comunicazione con le fibre sia molto veloce, ma ci sono molti settori in cui i satelliti non possono essere rimpiazzati dalla fibra, come ad esempio la comunicazione mobile. Le comunicazioni broadcast per eccellenza sono satellitari. Un altro settore è la comunicazione in luoghi ostili, in cui le infrastrutture terrestri scarseggiano e la posa di cavi ottici non sarebbe il massimo. Inoltre anche le zone in cui i costi di posa sono elevati il satellite può essere un ottima alternativa. In sostanza per la comunicazione terrestre è sicuramente migliore la fibra ma i satelliti rimarranno indispensabili per altri settori. Il futuro delle comunicazioni sembrerebbe essere comunque quello terrestre basato su fibre ottiche combinato con la rete cellulare, ma per alcune applicazioni specializzate i satelliti sono migliori.
 
 \subsection{Sistema Telefonico}
 
@@ -218,21 +222,29 @@ Si possono quindi individuare 3 componenti fondamentali del sistema telefonico:
 
 \begin{enumerate}
 
-\item{Collegamenti locali: rappresentano il collo di bottiglia del sistema};
-\item{Linee: collegamenti in fibra tra le centrali};
-\item{Centrali di commutazione: che spostano le chiamate tra le linee}.
+\item{\textbf{Collegamenti locali}: rappresentano il collo di bottiglia del sistema};
+\item{\textbf{Linee}: collegamenti in fibra tra le centrali};
+\item{\textbf{Centrali di commutazione}: che spostano le chiamate tra le linee}.
 
 \end{enumerate}
 
+\begin{figure}[htpd]
+\centering
+\includegraphics[width=30mm]{images/telephone_network.jpg}
+\caption{(a) una rete completamente interconnessa, (b) commutatore centralizzato, (c) gerarchia a due livelli}
+\end{figure}
+
 \subsubsection{Modem, ADSL, Wireless}
 
-Il modem ha la funzione di convertire i dati dalla forma digitale del pc alla forma analogica necessaria per inviare i dati attraverso un collegamento locale. Nella centrale poi i dati vengono ritrasformati in digitale e poi ritrasmessi in linee a lunga distanza. Dall'altro capo poi ci sarà il modem per la conversione inversa alla precedente. I problemi principali delle linee di trasmissioni sono 3:
+Per inviare segnali digitali attraverso una linea telefonica, il computer deve convertire i dati in forma analogica; solo in questo modo le informazioni possono essere trasmesse attraverso un collegamento locale.
+Il modem ha la funzione di convertire i dati dalla forma digitale del pc alla forma analogica. Nella centrale poi i dati vengono ritrasformati in digitale e poi ritrasmessi in linee a lunga distanza. Dall'altro capo poi ci sarà il modem per la conversione inversa alla precedente. 
+I problemi principali delle linee di trasmissioni sono 3:
 
 \begin{enumerate}
 
-\item{Attenuazione: rappresenta la perdita di energia (in dB/Km) dalla propagazione del segnale. Tale perdita dipende dalla frequenza};
-\item{Distorsione: rappresenta la differenza di velocità tra le varie componenti del segnale};
-\item{Rumore: rappresenta energia indesiderata all'interno del segnale originale, causate da sorgenti di trasmissione esterne}.
+\item{\textbf{Attenuazione}: rappresenta la perdita di energia (in dB/Km) causata dalla propagazione del segnale verso l'esterno. Tale perdita dipende dalla frequenza};
+\item{\textbf{Distorsione}: rappresenta la differenza di velocità all'interno del cavo tra le varie componenti del segnale};
+\item{\textbf{Rumore}: rappresenta l'energia indesiderata all'interno del segnale originale, causate da sorgenti di trasmissione esterne}.
 
 \end{enumerate}
 
@@ -244,7 +256,7 @@ Il modem ha la funzione di convertire i dati dalla forma digitale del pc alla fo
 
 \subsubsection*{Modem}
 
-Per riuscire a inviare dati in forma digitale è necessario un ampio spettro di frequenza questo rende adatta la trasmissione in banda base (DC) solo a basse velocità e distanze brevi. Il problema è aggirato utilizzando una trasmissione (AC) aggiungendo un segnale portante tra i 1000 e i 2000 Hz. Nella modulazione di ampiezza (ASK) sono utilizzate 2 diverse ampiezze 0 e 1, nella modulazione di frequenza (FSK) si utilizzano 2 o più toni. In quella di fase invece l'onda portante è spostata di 0 o 180 gradi a intervalli regolari.
+Per riuscire a inviare dati in forma digitale è necessario un ampio spettro di frequenza questo rende adatta la trasmissione in banda base (DC) solo a basse velocità e distanze brevi. Il problema è aggirato utilizzando una trasmissione (\textbf{AC}) aggiungendo un segnale portante tra i 1000 e i 2000 Hz. Nella \textbf{modulazione di ampiezza} (ASK) sono utilizzate 2 diverse ampiezze 0 e 1, nella \textbf{modulazione di frequenza} (FSK) si utilizzano 2 o più toni. Nella forma più semplice di \textbf{modulazione di fase}, l'onda portante è spostata sistematicamente di 0 oppure 180 gradi a intervalli uniformi.
 
 \begin{figure}[htbp]
 \centering
@@ -264,16 +276,18 @@ Per riuscire a inviare dati in forma digitale è necessario un ampio spettro di 
 \caption{Modulazione di fase}
 \end{figure}
 
-Un apparecchio che utilizza uno di questi metodi per ``tradurre'' un flusso di bit in segnale analogico è detto modem. La maggior parte dei modem campiona 2400 volte al secondo. Il numero di campionamenti al secondo si misura in \textbf{baud}. Durante ogni baud è trasmesso un simbolo.
+Un apparecchio che utilizza uno di questi metodi per ``tradurre'' un flusso di bit in segnale analogico è detto \textbf{modem}. La maggior parte dei modem campiona 2400 volte al secondo. Il numero di campionamenti al secondo si misura in \textbf{baud}. Durante ogni baud è trasmesso un simbolo.
 Concetti da ricordare:
 
 \begin{itemize}
-\item{Banda passante: intervallo di frequenza passante nel mezzo con un attenuazione minima(Hz)};
-\item{Baud rate: numero di campioni per secondo (=frequenza simboli)};
-\item{Modulazione: determina il numero di bit per simbolo};
-\item{Frequenza di bit: quantità di (simboli/sec)*(bit/simbolo)}.
+\item{\textbf{Banda passante}: intervallo di frequenza passante nel mezzo con un attenuazione minima, varia da 0 a una frequenza massima e si misura in Hertz};
+\item{\textbf{Baud rate}: numero di campioni per secondo (=frequenza simboli)};
+\item{\textbf{Modulazione}: è una tecnica che determina il numero di bit per simbolo};
+\item{\textbf{Frequenza di bit}: quantità di $(simboli/sec)*(bit/simbolo)$}.
 
 \end{itemize}
+
+Tutti i modem evoluti utilizzano una combinazione di tecniche di modulazione per trasmettere più bit per baud. Spesso per trasmettere diversi bit/simbolo si combinano insieme più ampiezze e spostamenti di fase.
 
 La trasmissione digitale è adatta in banda base (DC) a basse velocità. Per aggirare i problemi di tale banda si usa la trasmissione AC introducendo un segnale costante detto \textbf{portante d'onda sinusoidale}. La sua ampiezza, frequenza o fase posso essere modulate per inviare informazioni. Nella \textbf{modulazioni di ampiezza} vengono usate 2 ampiezze diverse per rappresentare 1 e 0 mentre in quella di \textbf{frequenza} (FSK) si utilizzano più toni. Infine nella \textbf{modulazione di fase} più semplice l'onda viene spostata di 0 o 180 gradi (schemi migliori utilizzano spostamenti più piccoli). I modem odierni utilizzano modulazioni ibride per avere un maggior baud rate. Un esempio è la QPSK (\textit{Quadrate Phase Shift Keying}). Questa tecnica di modulazione prevede l'utilizzo di più fasi e più ampiezze, e in base al numero di combinazioni nascono i nomi QAM-16 (4 bit per simbolo utilizzando 4 fasi e 4 ampiezze, 9600 bps), QAM-64 (\textit{Quadrature Amplitude Modulation})e così via.
 
@@ -283,32 +297,49 @@ La trasmissione digitale è adatta in banda base (DC) a basse velocità. Per agg
 \caption{Diagramma costellazione QAM}
 \end{figure}
 
-Uno schema con costellazione molto fitta è soggetto a errori per questo i modem che li adottano utilizzano meccanismi di correzione degli errori, per esempio con un bit extra di parità.
+Uno schema con costellazione molto fitta è soggetto a errori, per questo i modem che li adottano utilizzano meccanismi di correzione degli errori, per esempio con un bit extra di parità.
 Gli standard utilizzati dai modem più conosciuti sono:
 
 \begin{itemize}
 
-\item{V.32: trasmette 4 bit più 1 di parità a 2400 baud (9600 bps)};
-\item{V.32 bis: trasmette 6 bit più 1 di parità a 2400 baud (14400 bps)};
-\item{V.34: utilizza 12 bit per simbolo a 2400 baud (28800 bps)};
-\item{V.34 bis: utilizza 14 bit per simbolo a 2400 baud (33600 bps)}.
+\item{\textbf{V.32}: trasmette 4 bit più 1 di parità a 2400 baud (9600 bps)};
+\item{\textbf{V.32 bis}: trasmette 6 bit più 1 di parità a 2400 baud (14400 bps)};
+\item{\textbf{V.34}: utilizza 12 bit per simbolo a 2400 baud (28800 bps)};
+\item{\textbf{V.34 bis}: utilizza 14 bit per simbolo a 2400 baud (33600 bps)}.
 
 \end{itemize}
 
-Una connessione che permette ai dati di viaggiare in entrambe i sensi è detta \textbf{full duplex}, mentre se lo permette ma solo uno alla volta è detta \textbf{half duplex} se invece è permesso un solo senso è \textbf{simplex}. In base quanto detto la velocità massima dei modem è 34 Kbps questo non è vero perché l'ampiezza del canale telefonico è 4 MHz quindi per Nyquist il numero di campioni massimo è 8000, per gli 8 bit per campione usato negli U.S. si hanno 64 Kbps! In realtà non è così perché 1 bit serve per il controllo per cui si riduce il tutto a 56 Kbps che è lo standrard\textbf{ V.90}.
+Una connessione che permette ai dati di viaggiare in entrambe i sensi è detta \textbf{full duplex}; un esempio di linea full duplex è una strada a due corsie. Una connessione che permette ai dati di scorrere in entrambi i sensi ma ha solo un senso alla volta è chiamata \textbf{half duplex}; un esempio di linea half duplex è il binario ferroviario. Infine, una connessione che permette di trasmettere i dati in una sola direzione è chiamata \textbf{simplex}; un esempio di linea simplex è una strada a senso unico. 
+In base a quanto detto la velocità massima dei modem è 34 Kbps; questo non è vero perché l'ampiezza del canale telefonico è 4 MHz, quindi per Nyquist il numero di campioni massimo è 8000, per gli 8 bit per campione usato negli U.S. si hanno 64 Kbps. In realtà non è così, perché 1 bit serve per il controllo, per cui si riduce il tutto a 56 Kbps, che è lo standrard \textbf{V.90}. Lo standard successivo al V.90 si chiama \textbf{V.92}. I modem che adottano questo standard possono raggiungere una velocità di trasmissione di 48 kbps, se la linea è in grado di gestirla.
 
 \subsubsection*{Linee DSL}
 
-Servizi con banda maggiore a quella appena descritta sono detti a \textbf{banda larga}. Per ottenere questo aumento di banda viene usato un artificio che si basa sostanzialmente sulla rimozione del filtro che limitava la capacità del collegamento locale a 3100 Hz. Questi servizi, detti xDSL, sarebbero dovuti funzionare sui doppini già installati nelle abitazioni, senza creare problemi ai telefoni, con costi limitati e non legati al tempo di utilizzo e ovviamente dovevano velocizzare di molto quei 56 Kbps. 
+I servizi con un'ampiezza di banda superiore a quella del servizio telefonico standard si dicono \textbf{a banda larga}; il termine, comunque, rappresenta più un concetto di merketing che un concetto tecnico.
+Inizialmente ci furono molte offerte sovrapposte, tutte raccolte sotto un unico nome: \textbf{xDSL}.
+I modem sono così lenti perchè i telefono sono stati inventati per trasmettere la voce umana e l'intero sistema è stato attentamente ottimizzato per questo scopo. Nel punto in cui ogni collegamento locale termina nella centrale locale, il cavo attraversa un filtro che attenua tutte le frequenze sotto i 300 Hz e sopra i 3400 Hz. Il limite non è netto, perciò l'ampiezza di banda si considera solitamente 4000 Hz. I dati sono perciò limitati a questa stretta banda.
+Il trucco che fa funzionare xDSL è che quando un cliente si abbona a questo servizio, la linea di ingresso viene collegata a un diverso tipo di commutatore che, non usando questo filtro, rende disponibile l'intera capacità del collegamento locale.
+I servizi xDSL sono stati progettati tenendo conto di alcuni obiettivi:
 
-\begin{itemize}
+\begin{enumerate}
 
-\item{Proposta AT\&T: divisione dello spettro delle reti locali in POTS, upstream e downstream};
-\item{DMT (\textit{Discrete MultiTono}): lo spettro è diviso in 256 canali indipendenti. Il primo canale utilizzato per POTS, i 5 successivi non vengono utilizzati per limitare le interferenze e tutti gli altri per i dati, e chi fornisce il servizio decide come dividerli tra up e down (solitamente 10\%-90\%)}.
+\item I servizi devono funzionare sui doppini di categoria 3 esistenti adoperati per i collegamenti locali;
+\item Non devono influire sugli apparecchi telefonici e sui fax in dotazione degli utenti;
+\item Devono essere molto più veloci della connessione a 56 kbps;
+\item Dovrebbero essere sempre attivi e avere un costo mensile non legato al tempo di utilizzo.
 
-\end{itemize}
+\end{enumerate}
 
-Quest'ultima idea fa nascere l'ADSL che può arrivare a circa 8 Mbps in ricezione e 1 Mbps in trasmissione. In realtà questi valori sarebbero maggiori ma il rapporto segnale/rumore non li permettono. Per usufruire dell'ADSL è necessario installare un \textbf{NID} e uno \textbf{splitter} spesso all'interno di uno stesso pezzo, questo per filtrare le bande e un modem. Se quest'ultimo non è interno al pc allora si deve collegare a esso con ethernet, USB o rete wireless.
+Il primo servizio \textbf{ADSL}, offerto da AT\&T, divideva lo spettro disponibile sui collegamenti locali in tre bande di frequenza: \textbf{POTS} (\textit{Plain Old Telephone Service}), \textbf{upstream} (dall'utente alla centrale) e \textbf{downstream} (dalla centrale all'utente). La tecnica basata su diverse bande di frequenza è chiamata \textbf{multiplexing} a divisione di frequenza.
+Le offerte successive proposte da altri fornitori hanno seguito un approccio diverso, che poi si è dimostrato vincente. L'approccio alternativo, chiamato \textbf{DMT} (\textit{Discrete MultiTone}) divideva lo spettro in 256 canali indipendenti. Il fornitore del servizio decide quanti canali utilizzare per la trasmissione e quanti per la ricezione. Una combinazione 50 e 50 è tecnicamente possibile, ma la maggior parte dei fornitori assegna al canale utilizzato per scaricare i dati l'80-90\% dell'ampiezza di banda, poichè la maggior parte degli utenti preleva più di quanto trasmetta. Questa soluzione fa nascere la ``A'' (Asimmetrica) di ADSL. Di solito 32 canali sono dedicati alla trasmissione e il resto alla ricezione.
+Dentro ogni canale si utilizza uno schema di modulazione simile a quello di V.34, dove la velocità di campionamento è di 4000 baud invece di 2000. La qualità della linea è tenuta strettamente sotto controllo e la velocità dati è regolata continuamente, perciò canali differenti possono avere velocità diverse.
+Il model ADSL è in realtà un elaboratore di segnali digitali, che fa le veci di 250 modem QAM che operano in parallelo a diverse frequenze. Poichè la maggior parte dei modem ADSL è esterna, il computer deve essere collegato all'apparecchio attraverso una connessione veloce; di solito si utilizza una scheda Ethernet oppure una porta USB.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=120mm]{images/adsl_configuration.png}
+\caption{Una tipica configurazione ADSL}
+\end{figure}
+
 
 \subsubsection{Multiplexing}
 
