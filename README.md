@@ -17,15 +17,15 @@ Il presente documento è rilasciato esclusivamente a scopo didattico di apprendi
 
 ## A chi è indirizzato il seguente documento
 
-Il seguente documento è indirizzato principalmente agli studenti dell'Università degli studi di Padova che devono preparare l'esame di Reti e sicurezza. Il libro di per sè non prevede particolari prerequisiti di conoscenza, ma per questione di tempo e per non appesantire il documento, molti approfondimenti e chiarimenti saranno a carico allo studente stesso. Non è nemmeno richiesto che lo studente abbia seguito le lezioni di Massimo Marchiori, anche se è caldamente consigliato frequentare il corso, laddove ci sia la possibilità di farlo.
+Il seguente documento è indirizzato principalmente agli studenti dell'Università degli studi di Padova che devono preparare l'esame di Reti e sicurezza. Il libro di per sè non prevede particolari prerequisiti di conoscenza, ma per questione di tempo e per non appesantire il documento, molti approfondimenti e chiarimenti saranno a carico allo studente stesso. Non è prerequisito che lo studente abbia seguito le lezioni di Massimo Marchiori, anche se è caldamente consigliato frequentare il corso, laddove ci sia la possibilità di farlo.
 
 ## Come contribuire al progetto
 
-Il documento è stato prodotto da studenti volontari, che credono nella libera condivisione del proprio lavoro. Chiunque può partecipare al progetto, contattando il proprietario del repository, preferibilmente via email. La collaborazione dev'essere comunque concordata e deve seguire delle norme e un piano di progetto, che verranno spiegate una volta divenuti collaboratori. Il piano e le norme sono discutibili in comunità, ma chiunque collabori dovrà seguirle con rigore e disciplina, altrimenti è perfettamente libero di effettuare un fork e di lavorare per conto proprio. Tutto questo viene fatto per evitare il caos e per arrivare ad un prodotto di qualità.
+Il documento è stato prodotto da studenti volontari, che credono nella libera condivisione del proprio lavoro. Chiunque può partecipare al progetto, contattando il responsabile, che coincide con il proprietario del repository, preferibilmente via email. La collaborazione dev'essere comunque concordata e deve seguire delle norme e un piano di progetto, che verranno spiegate una volta divenuti collaboratori. Il piano e le norme sono discutibili in comunità, ma chiunque collabori dovrà seguirle con rigore e disciplina. Tutto questo viene fatto per evitare il caos e per arrivare ad un prodotto di qualità. Chiunque non concordi con le norme o con il modus operandi del presente progetto è libero di effettuare un fork e continuare per conto proprio.
 
 ## Come aprire una issue
 
-Chiunque riscontri delle anomalie, delle problematiche relative alle sezioni del documento può aprire una issue anche se non è collaboratore. L'apertura di una issue dev'essere effettuata indicando nel titolo il numero della sezione in cui c'è il problema, e nel testo una descrizione il più possibile dettagliata. Inoltre, per agevolare il lavoro di manutenzione, è buona norma applicare un'etichetta. Il sistema di etichette attuale prevede la seguente suddivisione:
+Chiunque riscontri delle anomalie o delle problematiche relative alle sezioni del documento può aprire una issue anche se non è collaboratore. L'apertura di una issue dev'essere effettuata indicando nel titolo il numero della sezione in cui c'è il problema, e nel testo una descrizione il più possibile dettagliata. Inoltre, per agevolare il lavoro di manutenzione, è buona norma applicare un'etichetta. Il sistema di etichette attuale prevede la seguente suddivisione:
 
 * Scritto male: la sezione o parte della sezione è scritta male dal punto di vista sintattico e logico;
 * Errore ortografico: la sezione contiene uno o più errori ortografici, che possono riguardare la sintassi o la punteggiatura;
@@ -36,9 +36,4 @@ Chiunque riscontri delle anomalie, delle problematiche relative alle sezioni del
 * Richiesta di inserimento termine da glossario: si richiede che uno o più termini vengano inseriti nel glossario;
 * Richiesta di inserimento domanda: si richiede che una o più domande vengano inserite nell'appendice delle domande
 
-## Registro delle modifiche
-
-| Autore  | Data della modifica | Versione | Descrizione |
-| ------------- | ------------- | -------- | ----------- |
-| Luca De Franceschi | 07/05/2014 | 1.1.0 | Stesura del capitolo introduzione |
-| Luca De Franceschi | 07/05/2014  | 1.0.0 | Ricreato documento sulle basi del precedente, redatto da Mirko Polato |
+Issue senza etichetta o mal formate verranno il più delle volte ignorate e cestinate. Per l'aggiunta di nuove etichette si invita a contattare uno dei collaboratori.
