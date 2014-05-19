@@ -343,16 +343,16 @@ Il model ADSL è in realtà un elaboratore di segnali digitali, che fa le veci d
 
 \subsubsection{Multiplexing}
 
-Per limitare i costi le aziende hanno ideato modi per convogliare più conversazioni nello stesso mezzo fisico, appunto il\textbf{ Multiplexing}. Esistono sostanzialmente 2 categorie di quest'ultimi:
+Per limitare i costi le aziende hanno ideato elaborati schemi per convogliare più conversazioni nello stesso mezzo fisico, appunto il\textbf{ Multiplexing}. Esistono sostanzialmente 2 categorie di quest'ultimi:
 
 \begin{itemize}
 
-\item{FDM: Frequency Division Multiplexing};
-\item{TDM: Time Division Multiplexing};
+\item{\textbf{FDM}: \textit{Frequency Division Multiplexing}};
+\item{\textbf{TDM}: \textit{Time Division Multiplexing}};
 
 \end{itemize}
 
-In FDM lo spettro fi frequenze è diviso in bande e ogni utente ne possiede una. In TDM gli utenti si danno il cambio, tipo round-robin.
+In FDM lo spettro di frequenze è diviso in bande e ogni utente ha il possesso esclusivo di parte della banda. In TDM gli utenti si danno il cambio, acquisendo periodicamente il possesso di tutta la banda per un tempo brevissimo.
 
 \subsubsection*{Multiplexing a divisione di frequenza}
 
@@ -368,17 +368,21 @@ Gestita completamente da dispositivi elettronici digitali, per cui è necessaria
 
 \subsubsection{Commutazione}
 
+Dal punto di vista dell'ingegnere telefonico medio, il sistema telefonico è diviso in due impianti principali: l'impianto esterno (ossia i collegamenti locali e le linee) e l'impianto interno (composto dai commutatori che si trovano dentro le centrali di commutazione).
+Attualmente si utilizzano due diverse tecniche di commutazione: la commutazione di circuito e quella di pacchetto.
+
 \subsubsection*{Commutazione di circuito}
 
-Quando viene avviata una telefonata l'apparecchio di commutazione del sistema telefonico prova a creare un percorso fisico tra il chiamante e il chiamato. 
+Quando una persona o un computer avviano una telefonata, l'apparecchiatura di commutazione posta dentro il sistema telefonico cerca di creare un percorso fisico completo tra il telefono del chiamante e quello dell'utente chiamato. Questa tecnica è detta \textbf{commutazione di circuito}. Una proprietà importante della commutazione di circuito è legata alla necessità di configurare un percorso da un punto all'altro \textit{prima} di iniziare a trasmettere i dati.
 
 \subsubsection*{Commutazione di messaggio}
 
-Questa tecnica non prevede un collegamento fisico a priori ma si basa su un idea diversa, ovvero un passo alla volta. Il messaggio viene inviata alla prima centrale di commutazione, la quale dopo averlo esaminato per vedere gli eventuali errori, lo ritrasmette alla successiva fino ad arrivare al destinatario. Questa tecnica è chiamta di \textbf{store and forward}.
+Questa tecnica non prevede un collegamento fisico a priori tra il trasmettitore e il ricevitore, ma si basa su un idea diversa, ovvero un passo alla volta. Il messaggio viene inviata alla prima centrale di commutazione, la quale dopo averlo esaminato per vedere gli eventuali errori, lo ritrasmette alla successiva fino ad arrivare al destinatario. Questa tecnica è chiamta di \textbf{store and forward}. I primi sistemi di telecomunicazioni elettromeccanici hanno utilizzato la commutazione di messaggio per trasmettere i telegrammi. Questo tipo di centrale di commutazione era chiamata anche \textbf{centrale a nastro strappato}.
 
 \subsubsection*{Commutazione di pacchetto}
 
-Questa tecnica è molto diversa dalle precedenti e si basa sull'idea di dividere i dati in pacchetti limitati i quali partono e possono arrivare anche in ordine sparso sarà compito del destinatario riordinarli. Non c'è bisogno di alcun collegamento predefinito e ogni pacchetto può percorrere strade diverse. E' più resistente agli errori della commutazioni di circuito , poiché si possono aggirare commutatori bloccati passando per un altro percorso. Inoltre la commutazione di pacchetto non riserva alcuna ampiezza di banda per cui in linea generale è più efficiente. L'addebito dipende sia dal tempo che dalla distanza.
+Questa tecnica è molto diversa dalle precedenti e si basa sull'idea di dividere i dati in pacchetti limitati, i quali partono e possono arrivare anche in ordine sparso. Sarà compito del destinatario riordinarli. Non c'è bisogno di alcun collegamento predefinito e ogni pacchetto può percorrere strade diverse. È più resistente agli errori della commutazioni di circuito, poiché si possono aggirare commutatori bloccati passando per un altro percorso. Inoltre la commutazione di pacchetto non riserva alcuna ampiezza di banda, per cui in linea generale è più efficiente. L'addebito dipende sia dal tempo che dalla distanza.
+La comunicazione di pacchetto utilizza la trasmissione \textbf{store and forward}. Il pacchetto è accumulato nella memoria del router, poi è inviato al router successivo. Con la commutazione di circuito, i bit scorrono attraverso il cavo senza interruzioni. La ternica store and forward aggiunge ritardo.
 
 \begin{figure}[htbp]
 \centering
@@ -388,83 +392,122 @@ Questa tecnica è molto diversa dalle precedenti e si basa sull'idea di dividere
 
 \subsection{Sistema telefonico mobile}
 
+Esistono due tipi di telefoni wireless: \textbf{cordless} e \textbf{cellulari} (o telefoni mobili). I cordless sono dispositivi domestici connessi da una base e da un microtelefono.
 Esistono 3 generazioni di telefoni cellulari:
 
 \begin{enumerate}
 
 \item{Voce analogica};
 \item{Voce digitale};
-\item{Voce e dati digitali}.
+\item{Voce e dati digitali (Internet, posta elettronica, ...)}.
 
 \end{enumerate}
 
 \subsubsection{Cellulari di I generazione}
 
-Il primo esempio di ``cellulare'' lo si ha nel 1946 quando venne creato il sistema premi e parla, come ad esempio quella dei CB. Negli anni sessanta scompare il tasto per parlare grazie all' IMTS (\textit{Improved Mobile Telephone System}) che utilizzava un trasmettitore ad alta potenza posto in una collina, il quale utilizzava 2 frequenze, una per la ricezione e una per trasmettere. IMTS utilizzava solo 23 canali distribuiti tra 150 e 450 MHz. Il numero limitato di canali faceva si che alcuni utenti dovevano aspettare molto prima di aver segnale libero.
+Il primo esempio di ``cellulare'' lo si ha nel 1946 quando venne creato il sistema \textbf{premi e parla} per auto, come ad esempio quella dei CB. Negli anni `60 venne installato \textbf{IMTS} (\textit{Improved Mobile Telephone System}), che utilizzava un trasmettitore ad alta potenza posto in una collina, il quale utilizzava 2 frequenze, una per la ricezione e una per trasmettere, onde per cui il pulsante che attivava la comunicazione scomparve. IMTS utilizzava solo 23 canali distribuiti tra 150 e 450 MHz. Il numero limitato di canali faceva si che alcuni utenti spesso dovevano aspettare molto tempo prima di ottenere il segnale di libero. Inoltre il sistema era spesso soggetto a interferenze e i trasmettitori erano molto distanti l'uno dall'altro. Questo insieme di motivi rese perciò il sistema \textbf{impraticabile}.
 
 \subsubsection*{Sistema telefonico mobile avanzato}
 
-Cambiò tutto grazie a AMPS (\textit{Advanced MPS}). Ogni area geografica era divisa in \textbf{celle}, in AMPS grandi 10-20 Km. Ogni cella utilizzava un insieme di frequenze diversa da quelle vicine. L'utilizzo di celle piccole richiede meno potenza. L'idea principale sta proprio qui, in celle piccole e grande riutilizzo delle frequenze. Nelle aree in cui il numero di utenti è elevato e il sistema tende a sovraccaricarsi ,le celle vengono a loro volta divise in \textbf{microcelle} così da aumentare il riuso delle frequenze. Tanto più piccole sono le celle tanto meno potenti devono essere i dispositivi. Da notare il fatto che una frequenza utilizzata da una cella non è più usata nell'area cuscinetto attorno ad essa (area di circa 2 celle). Al centro di ogni cella si trova una stazione la quale è collegata a un dispositivo chiamato MTSO (\textit{Mobile Telephone Switching Office}) o MSC(Mobile Switching Center). In sistemi più grandi sono necessari più MTSO che quindi vengono divisi in livelli. Ogni MTSO colloquia con gli altri. Un telefonino in ogni istante è logicamente posizionato in una certa cella e ogni qualvolta il segnale in tale cella si affievolisce, la stazione base colloquia con le adiacenti per delegare la gestione dell'apparecchio alla cella col segnale più forte. Questo processo è chiamato \textbf{handoff} e richiede 30 msec. Esistono 2 tipi di handoff:
+Tutto questo cambiò grazie a AMPS (\textit{Advanced MPS}), un sistema inventato da Bell Labls e sviluppatosi negli stati uniti nel 1982. In tutti i sistemi telefonici mobili, un'area geografica è divisa in \textbf{celle} (ecco perchè si parla di \textit{telefoni cellulari}). In AMPS le celle sono grandi 10-20 Km. Ogni cella utilizzava un insieme di frequenze diversa da quelle vicine. L'utilizzo di celle piccole richiede meno potenza. L'idea chiave che dà al sistema cellulare una capacità superiore a quella dei sistemi precedenti è l'utilizzo di celle relativamente piccole e il il riutilizzo delle frequenze di trasmissione delle celle vicine. Le celle hanno tutte le stesse dimensioni e sono organizzate in gruppi di 7. Nelle aree in cui il numero di utenti è elevato e il sistema tende a sovraccaricarsi, dunque le celle vengono a loro volta divise in \textbf{microcelle}, in modo da aumentare il riuso delle frequenze. Tanto più piccole sono le celle tanto meno potenti devono essere i dispositivi. Da notare il fatto che una frequenza utilizzata da una cella non è più usata nell'area cuscinetto attorno ad essa (area di circa 2 celle).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.8]{images/amps_cells.png}
+\caption{Divisione in celle di AMPS}
+\end{figure}
+
+Al centro di ogni cella si trova una stazione base, che comunica con tutti i telefoni che si trovano nella cella, ed è collegata a un dispositivo chiamato \textbf{MTSO} (\textit{Mobile Telephone Switching Office}) o \textbf{MSC} (\textit{Mobile Switching Center}). In sistemi più grandi sono necessari più MTSO che quindi vengono divisi in sottolivelli. Ogni MTSO colloquia con gli altri. Un telefonino in ogni istante è logicamente posizionato in una certa cella e ogniqualvolta il segnale in tale cella si affievolisce, la stazione base colloquia con le adiacenti per delegare la gestione dell'apparecchio alla cella col segnale più forte. Questo processo è chiamato \textbf{handoff} e richiede 30 msec. Esistono 2 tipi di handoff:
 
 \begin{itemize}
 
-\item{soft handoff: l'acquisizione della nuova stazione avviene prima di interrompere il segnale precedente};
-\item{hard handoff: la vecchia stazione rilascia il telefono prima che la nuova lo acquisisca. La chiamata viene bruscamente interrota}.
+\item{\textbf{soft handoff}: l'acquisizione della nuova stazione avviene prima di interrompere il segnale precedente. In questo modo non c'è alcuna perdita di continuità ma il telefono dev'essere in grado di sintonizzare due frequenze nello stesso momento};
+\item{\textbf{hard handoff}: la vecchia stazione rilascia il telefono prima che la nuova lo acquisisca. La chiamata viene bruscamente interrota se la nuova non è in grado di prendere il controllo del dispositivo}.
 
 \end{itemize}
 
+\subsubsection*{Canali}
+
+Il sistema AMPS utilizza 832 canali full duplex, ognuno composto da una coppia di canali simplex. Esistono 832 canali simplex, compresi tra 824 e 849 MHz e 832 canali di ricezione simplex compresi tra 869 e 894 MHz. Ognuno di questi canali simplex è ampio 30 kHz, perciò AMPS utilizza FDM per separare i canali.
+Gli 832 canali sono divisi in quattro categorie:
+
+\begin{enumerate}
+
+\item{\textbf{Controllo}, per gestire il sistema};
+\item{\textbf{Paging}, per avvisare gli utenti mobili di chiamate in arrivo};
+\item{\textbf{Accesso}, per impostare la chiamata e l'assegnazione del canale};
+\item{\textbf{Dati}, per voce, fax o dati}.
+
+\end{enumerate}
+
 \subsubsection*{Gestione della chiamata}
 
-Ogni telefono AMPS ha un numero seriale di 32 bit e un numero di telefono 10 cifre. Ogni volta che viene acceso, il telefono esplora i vari canali e trova il segnale più potente. Il telefono quindi trasmette in broadcast il proprio seriale e il numero di telefono con un codice di correzione degli errori. La stazione base aggiorna l' MTSO e ogni 15 minuti circa aggiorna la posizione corrente. Per chiamare il telefono acceso invia il numero del chiamato e i propri dati attraverso il canale di accesso e quando riceve la richiesta la stazione base informa l'MTSO. Se il chiamante appartiene a quell'MTSO cerca un canale libero per la chiamata, e trasmette il numero del canale al telefono. Il processo di ricezione è diverso: ogni telefono è in ascolto nel canale di trasferimento e quanto l'MTSO riceve il pacchetto che richiede il destinatario lo passa alla stazione base la quale chiede conferma al telefono. In caso affermativo la stazione invia il numero del canale con la chiamata e inizia la conversazione.
+Ogni telefono AMPS ha un numero seriale di 32 bit e un numero di telefono 10 cifre registrato nella sua PROM. Ogni volta che viene acceso, il telefono esplora i vari canali e trova il segnale più potente. Il telefono quindi trasmette in broadcast il proprio seriale e il numero di telefono con un codice di correzione degli errori. La stazione base aggiorna l' MTSO e ogni 15 minuti circa aggiorna la posizione corrente. Per chiamare il telefono acceso invia il numero del chiamato e i propri dati attraverso il canale di accesso e quando riceve la richiesta la stazione base informa l'MTSO. Se il chiamante appartiene a quell'MTSO cerca un canale libero per la chiamata, e trasmette il numero del canale al telefono. Il processo di ricezione è diverso: ogni telefono è in ascolto nel canale di trasferimento e quanto l'MTSO riceve il pacchetto che richiede il destinatario lo passa alla stazione base la quale chiede conferma al telefono. In caso affermativo la stazione invia il numero del canale con la chiamata e inizia la conversazione.
 
 \subsubsection{Cellulari di II generazione}
 
-Nel mondo sono sostanzialmente utilizzati  4 sistemi: D-AMPS, GSM, CDMA e PDC utilizzato solo in Giappone e molto simile al D-AMPS.
+La prima generazione di telefoni cellulari era analogica; la seconda è stata digitale.
+Nel mondo odierno sono sostanzialmente utilizzati 4 sistemi: \textbf{D-AMPS}, \textbf{GSM}, \textbf{CDMA} e \textbf{PDC} utilizzato solo in Giappone e molto simile al D-AMPS.
 
 \subsubsection*{D-AMPS (\textit{Digital} AMPS)}
 
-Il D-AMPS è totalmente digitale. Progettato per coesistere con AMPS utilizza gli stessi canali a 30 KHz con le stesse frequenze. Si è resa disponibile una nuova banda di frequenza 1850-1910 MHz per sostenere l'aumento del carico. Alcuni cellulari erano in gradodi utilizzare entrambe le bande disponibili. Su un telefono D-AMPS il segnale voce preso dal microfono viene digitalizzato e compresso dal \textbf{vocoder}, questa compressione permette la condivisione di una coppia di frequenze (upstream/downstream) fino a 3 utenti con multiplexing a divisione di tempo. Ogni coppia di frequenza supporta 25 frame/sec di 40 msec. Ogni frame è diviso in 6 slot temporali. Gruppi di 16 frame costituiscono un superframe, con alcune informazioni di controllo. Concettualmente funziona come AMPS: viene acceso il telefono, viene contattata la stazione e poi rimane in ascolto.
-Nei tempi in cui il cellulare non riceve ne trasmette viene testata la qualità della linea. Questa tecnica è chiamata \textbf{MAHO}(\textit{Mobile Assisted HandOff})
+Il sistema D-AMPS è totalmente digitale. È stato progettato attentamente per coesistere con AMPS e utilizza gli stessi canali a 30 KHz con le stesse frequenze. Assieme all'introduzione del servizio si è resa disponibile una nuova banda di frequenza 1850-1910 MHz per sostenere l'aumento del carico. Alcuni cellulari erano in grado di utilizzare entrambe le bande disponibili. Su un telefono D-AMPS il segnale voce raccolto dal microfono viene digitalizzato e compresso da un circuito chiamato \textbf{vocoder}. Questa compressione permette la condivisione di una coppia di frequenze (upstream/downstream) fino a 3 utenti con multiplexing a divisione di tempo. Ogni coppia di frequenza supporta 25 frame/sec di 40 msec. Ogni frame è diviso in 6 slot temporali. Gruppi di 16 frame costituiscono un superframe, con alcune informazioni di controllo. Concettualmente funziona come AMPS: viene acceso il telefono, viene contattata la stazione e poi rimane in ascolto.
+Nei tempi in cui il cellulare non riceve nè trasmette viene testata la qualità della linea. Questa tecnica è chiamata \textbf{MAHO}(\textit{Mobile Assisted HandOff}).
+Uno \textbf{svantaggio} di questo sistema è che riducendo il traffico sul collegamento locale non aumenta la capacità del sistema.
 
 \subsubsection*{Comunicazioni GSM \textit{(Global System for Mobile communications)}}
 
-Molto simile ad D-AMPS però ha i canali più ampi così possono supportare ben 8 utenti in una coppia di frequenze. Un sistema GSM ha 124 coppie di canali simplex ampi 200 KHz e supporta 8 connessioni grazie a multiplexing a divisione di tempo. A ogni stazione attiva è assegnato uno slot temporale su una coppia di frequenze. Quindi teoricamente supporta 992 canali molti di questi però utilizzati come canali di controllo. Trasmissione e ricezione non avvengono nello stesso intervallo di tempo perché il sistema non è in grado di gestirlo. Questo protocollo ha introdotto le schede SIM che contengono al loro interno IMSI (identifica la SIM) e la chiave di crittografi (Ki). L'identificazione avviene così:
+Molto simile ad D-AMPS, utilizza anch'esso il multiplexing a divisione di frequenza, però ha i canali più ampi in modo da poter supportare ben 8 utenti in una coppia di frequenze. Un sistema GSM ha 124 coppie di canali simplex ampi 200 KHz e supporta 8 connessioni grazie a multiplexing a divisione di tempo. A ogni stazione attiva è assegnato uno slot temporale su una coppia di frequenze. Quindi teoricamente supporta 992 canali. Molti di questi però sono utilizzati come canali di controllo. Trasmissione e ricezione non avvengono nello stesso intervallo di tempo perché il sistema non è in grado di gestirlo. Questo protocollo ha introdotto le schede \textbf{SIM} che contengono al loro interno \textbf{IMSI} (identifica la SIM) e la chiave di crittografi (\textbf{Ki}). L'identificazione avviene così:
 
 \begin{enumerate}
 
 \item{Il cellulare manda Ki e IMSI in broadcast};
 \item{L'operatore lo riceve e manda un numero casuale};
-\item{Il cell lo rimanda firmato con Ki};
-\item{L'operatore controlla}.
+\item{Il cell lo rimanda firmato con una chiave Ki};
+\item{L'operatore ``sa tutto'', perchè ha una copia sia del'IMSI che della Ki per vedere se il numero è giusto (controllo per stabilire che ``siamo noi'' e non qualcun altro)}.
 
 \end{enumerate}
 
-Il \textbf{canale di controllo broadcast} è un flusso continuo di dati trasmessi dalla stazione base che annuncia identità e stato del canale. Il \textbf{canale di controllo dedicato} è utilizzato per aggiornare la posizione, registrare il terminale nella rete e configurare la chiamata. Infine c'è un \textbf{canale di controllo comune} che è diviso in 3 sottocanali logici. Il primo è il \textbf{canale di paging} utilizzato dalla stazione per annunciare le chiamate in arrivo. Poi c'è il \textbf{canale ad accesso casuale} e permette agli utenti d richiedere uno slot sul canale di controllo dedicato. Infine c'è il \textbf{canale di assegnazione dell'accesso} che assegna il lo slot del canale di controllo dedicato per ripetere le richieste efettuate dal secondo canale.
+Il \textbf{canale di controllo broadcast} è un flusso continuo di dati trasmessi dalla stazione base, che annuncia l'identità e lo stato del canale. Il \textbf{canale di controllo dedicato} è utilizzato per aggiornare la posizione, registrare il terminale nella rete e configurare la chiamata. Infine c'è un \textbf{canale di controllo comune} che è diviso in 3 sottocanali logici. Il primo è il \textbf{canale di paging} utilizzato dalla stazione per annunciare le chiamate in arrivo. Poi c'è il \textbf{canale ad accesso casuale} e permette agli utenti d richiedere uno slot sul canale di controllo dedicato. Infine c'è il \textbf{canale di assegnazione dell'accesso} che assegna lo slot del canale di controllo dedicato per ripetere le richieste effettuate dal secondo canale.
 
 \subsubsection*{CDMA \textit{(Code Division Multiple Access)}}
 
-Miglior sistema rispetto a quelli presentati e base per la III generazione a volte chiamato \textbf{cdmaOne}. CDMA permette la trasmissione per tutto il tempo attraverso l'intero spettro. Queste trasmissioni multiple simultanee vengono separate tramite tecnica di codifica. L'idea sta nel fatto che i segnali si sommino linearmente. Per cui tutti comunicano ma ogni coppia lo fa in ``lingua diversa''. Per risalire a ciò che viene detto basta togliere il rumore aggiunto dalle conversazioni di altri. Per riuscire a filtrare tale segnale rumoroso vengono utilizzate le matrice di Hadamard. Tecnicamente il CDMA funziona così:\\ ogni tempo di bit è diviso in m intervalli chiamati \textbf{chip} (generalmente 64-128 chip per bit) e ad ogni stazione viene assegnata una \textbf{sequenza di chip} univoca. Per trasmettere un 1 la stazione deve semplicemente inviare tale sequenza se invece invia uno zero deve farne il complemento. Non sono ammessi altri schemi. Per aumentare la quantità di informazione inviabile basta passare da b bit/sec a mb chip/sec aumentando l'ampiezza di banda di un fattore m. CDMA è una forma di comunicazione a spettro distribuito. Ognuna di queste sequenze di chip sono mutualmente ortogonali, ovvero ogni prodotto interno normalizzato di qualunque coppia di sequenze è uguale a 0 (ottenute con i \textbf{codici Walsh}). 
-\[ S*T = \frac{1}{m}\sum\limits_{i=1}^m S_i T_i = 0\]
+È il miglior sistema rispetto a quelli presentati ed è la base per la III generazione. A volte è anche chiamato \textbf{cdmaOne}. CDMA permette la trasmissione per tutto il tempo attraverso l'intero spettro. Queste trasmissioni multiple simultanee vengono separate tramite tecnica di codifica. L'idea sta nel fatto che i segnali si sommino linearmente. Per cui tutti comunicano ma ogni coppia lo fa in ``lingua diversa''. Per risalire a ciò che viene detto basta togliere il rumore aggiunto dalle conversazioni di altri. Per riuscire a filtrare tale segnale rumoroso vengono utilizzate le \textbf{matrici di Hadamard}. Tecnicamente il CDMA funziona così:
+
+\begin{itemize}
+
+\item{Ogni tempo di bit è diviso in m intervalli chiamati \textbf{chip} (generalmente 64-128 chip per bit)};
+\item{Ad ogni stazione viene assegnata una \textbf{sequenza di chip} univoca};
+\item {Per trasmettere un 1 la stazione deve semplicemente inviare tale sequenza, se invece invia uno 0 deve farne il complemento. Non sono ammessi altri schemi};
+
+\end{itemize}
+
+Per aumentare la quantità di informazione inviabile basta passare da b bit/sec a mb chip/sec,aumentando l'ampiezza di banda di un fattore m. CDMA è una forma di comunicazione a spettro distribuito. Ognuna di queste sequenze di chip sono mutualmente ortogonali, ovvero ogni prodotto interno normalizzato di qualunque coppia di sequenze è uguale a 0 (ottenute con i \textbf{codici Walsh}). 
+
+$$[ S*T = \frac{1}{m}\sum\limits_{i=1}^m S_i T_i = 0$$
+
 Da cui si deduce che S*S = 1 e S*\(\overline{S}\) = -1. 
 Ora, ogni stazione invia queste sequenze come bit le quali si ``mischiano'' con le altre, tecnicamente si sommano con gli altri segnali di altre stazioni. Una volta che il segnale arriva alla stazione di destinazione per sapere il bit inviato dalla sorgente basterà moltiplicare il segnale per la sequenza di chip della sorgente e si otterrà il bit inviato.
 Matematicamente se si deve capire il messaggio C allora sarebbe \textbf{S = A + \(\overline{B}\) + C}:
+
 \[S*C = (A+ \bar{B} + C)*C = A*C + \bar{B}*C + C*C = 0 + 0 + 1 = 1\]
+
 Per la proprietà di ortogonalità tutti i prodotti si sono annullati a parte quello interessato. Questo sistema è in genere utilizzato per reti wireless.
 
 \subsubsection{Cellulari di III generazione}
 
-La prima proposta di cellulari di III generazione fu fatta dall'ITU con l'intenzione di lanciarli nell'anno 2000 con ampiezza di banda di 2 MHz e 2Mbps per tutti. Un sogno irrealizzabile che ha visto il tutto slittare qualche anno più avanti e con alcune specifiche smussate come i 2Mbps per chi stava fermo e circa 400 per gli utenti che camminavano e 144 per quelli che si spostano a più alte velocità. I servizi che avrebe dovuto fornire IMT-2000 (così si chiamva la proposta) erano:
+La prima proposta di cellulari di III generazione fu fatta dall'ITU con l'intenzione di lanciarli nell'anno 2000 con ampiezza di banda di 2 MHz e 2Mbps per tutti. Un sogno irrealizzabile che ha visto il tutto slittare qualche anno più avanti e con alcune specifiche smussate, come i 2Mbps per chi stava fermo e circa 400 per gli utenti che camminavano e 144 per quelli che si spostano a più alte velocità. I servizi che avrebbe dovuto fornire IMT-2000 (così si chiamava la proposta) erano:
 
 \begin{itemize}
 
-\item trasmissione voce ad alta qualità;
-\item trasmissione messaggi;
-\item applicazioni multimediali;
-\item accesso internet.
+\item Trasmissione voce ad alta qualità;
+\item Trasmissione messaggi (al posto di e-mail, fax, SMS, chat, ...);
+\item Applicazioni multimediali (riproduzione musica, video, film, televisione, ...);
+\item Accesso Internet (esplorazione del web, ...).
 
 \end{itemize}
 
-Per riuscire ad utilizzare questi servizi in tutto il mondo si era pensati di creare un unica tecnologia per rendere tutto più semplice. Furono fatte diverse proposte.
+Per riuscire ad utilizzare questi servizi in tutto il mondo si era pensato di creare un unica tecnologia che rendesse il tutto più semplice. Furono fatte diverse proposte.
 
 \subsubsection*{W-CDMA (\textit{Wideband CDMA})}
 
